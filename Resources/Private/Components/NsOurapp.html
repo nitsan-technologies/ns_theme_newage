@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div class="text-center">
+    	<f:if condition="{content.text}">
+      	<f:format.raw>{content.text}</f:format.raw>
+    	</f:if>
+      <div class="badges">
+      	<f:if condition="{content.link1} && {file2.0} ">
+  	      <f:link.typolink parameter="{content.link1}" class="badge-link">
+  	      	<f:image height="60c" width="203c" image="{file2.0}" />
+  	      </f:link.typolink>
+      	</f:if>
+      	<f:if condition="{content.link2} && {file3.0}">
+  	      <f:link.typolink parameter="{content.link2}" class="badge-link">
+  	      	<f:image height="60c" width="203c" image="{file3.0}" />
+  	      </f:link.typolink>
+      	</f:if>
+      </div>
+    </div>
+  </div>
+</div>

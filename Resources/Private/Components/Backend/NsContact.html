@@ -1,0 +1,24 @@
+<f:if condition="{flexformData.beforeText} && {flexformData.afterText}">
+  <h2>{flexformData.beforeText}
+    <i class="{flexformData.iconInText}"></i>
+    {flexformData.afterText}</h2>
+</f:if>
+
+<ul class="list-inline list-social">
+  <f:for each="{flexformData.contact}" as="item" iteration="i">
+    <li class="list-inline-item social-{item.socialIcon}">
+      <f:if condition="{item.socialLink}">
+        <f:then>
+          <f:link.typolink parameter="{item.socialLink}">
+              <i class="{item.socialIcon}"></i>
+          </f:link.typolink>
+        </f:then>
+        <f:else>
+          <a href="#">
+              <i class="{item.socialIcon}"></i>
+          </a>
+        </f:else>
+      </f:if>
+    </li>
+  </f:for>
+</ul>

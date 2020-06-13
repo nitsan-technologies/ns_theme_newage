@@ -1,0 +1,43 @@
+{
+  "name": "nitsan/ns-theme-newage",
+  "type": "typo3-cms-extension",
+  "description": "The child theme of EXT:ns_basetheme",
+  "keywords": [
+    "TYPO3 CMS",
+    "bootstrap",
+    "responsive",
+    "frontend",
+    "theme"
+  ],
+  "homepage": "https://www.nitsan.in/",
+  "authors": [
+    {
+        "name": "NITSAN Technologies Pvt Ltd",
+        "email": "info@nitsan.in",
+        "role": "Developer",
+        "homepage": "http://www.nitsan.in/"
+    }
+  ],
+  "support": {
+    "issues": "https://www.nitsan.in/"
+  },
+  "license": "MIT",
+  "require": {
+    "typo3/cms-core": ">=8.0.0",
+    "nitsan/ns-basetheme": ">=9.0.0"
+  },
+  "replace": {
+      "nitsan/ns-theme-child": "self.version"
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor/",
+    "bin-dir": ".Build/bin/"
+  },
+  "extra": {
+      "typo3/cms": {
+          "cms-package-dir": "{$vendor-dir}/typo3/cms",
+          "web-dir": ".Build/public",
+          "extension-key": "ns_theme_newage"
+      }
+  }
+}

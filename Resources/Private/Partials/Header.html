@@ -1,0 +1,28 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <f:if condition="{settings.logo}">
+            <f:link.typolink parameter="#page-top" class="navbar-brand js-scroll-trigger">
+                {settings.logo}
+            </f:link.typolink>
+        </f:if>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <f:translate key="menu" extensionName="ns_theme_newage" />
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+           <f:render section="MainMenu" arguments="{MainMenu: MainMenu}" />
+        </div>
+    </div>
+</nav>
+<f:section name="MainMenu">
+    <f:if condition="{MainMenu}">
+        <ul class="navbar-nav ml-auto">
+            <f:for each="{MainMenu}" as="item">
+                <li class="nav-item">
+                    <a {f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}" class="nav-link js-scroll-trigger" href="#<f:format.case mode='lower'>{item.title}</f:format.case>">{item.title}</a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>

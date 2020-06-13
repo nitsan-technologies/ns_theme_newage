@@ -1,0 +1,25 @@
+<header class="masthead" style="color: black;">
+  <div class="container h-100">
+    <div class="row h-100">
+		<div class="col-lg-7">
+		      <div class="header-content mx-auto">
+		        <f:if condition="{flexformData.text}">
+		            <h1 class="mb-5">{flexformData.text}</h1>
+		        </f:if>
+		        <f:if condition="{flexformData.btnText} && {flexformData.link}">
+		          <a href="#" class="btn btn-outline btn-xl js-scroll-trigger">{flexformData.btnText}</a>
+		        </f:if>
+		      </div>
+		</div>      
+	  	<div class="col-lg-5" style="text-align: center;">
+	      <div class="device-container">
+	        <div class="device-mockup">
+	        	<f:for each="{image}" as="img">
+			    	<f:image height="350px" width="200px" src="fileadmin{img.originalFile.identifier}" />
+				</f:for>
+	        </div>
+	      </div>
+	    </div>      
+    </div>
+  </div>
+</header>

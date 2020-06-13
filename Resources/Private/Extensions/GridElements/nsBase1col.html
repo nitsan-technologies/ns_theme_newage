@@ -1,0 +1,11 @@
+{namespace v = FluidTYPO3\Vhs\ViewHelpers}
+
+<div class="space_before_{data.space_before_class} space_after_{data.space_after_class}" style="background-color: {data.flexform_bgcolor} ">
+	<div class="container">
+        <f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
+    </div>
+</div>
+<f:if condition="{data.flexform_enableOverlay}">
+	<div class="overlay"></div>
+</f:if>
+  

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-24T20:37:42Z">
+		<header/>
+		<body>
+            <trans-unit id="palette.access">
+                <source>Access</source>
+            </trans-unit>
+            <trans-unit id="general.headline">
+                <source>Headline</source>
+            </trans-unit>
+            <trans-unit id="general.subheadline">
+                <source>Sub Headline</source>
+            </trans-unit>
+            <trans-unit id="general.image">
+                <source>Upload image</source>
+            </trans-unit>
+            <trans-unit id="general.link">
+                <source>Button Link</source>
+            </trans-unit>
+            <trans-unit id="general.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="general.btnText">
+                <source>Button Text</source>
+            </trans-unit>
+            <trans-unit id="general.icon">
+                <source><![CDATA[ Add Icon text (https://fontawesome.com/icons?d=gallery&m=free)]]></source>
+            </trans-unit>
+            <trans-unit id="general.beforeText">
+                <source>Before icon text</source>
+            </trans-unit>
+            <trans-unit id="general.afterText">
+                <source>After icon text</source>
+            </trans-unit>
+            <trans-unit id="general.item">
+                <source>Item</source>
+            </trans-unit>
+            <trans-unit id="general.heart">
+                <source>Heart</source>
+            </trans-unit>
+            <trans-unit id="general.twitter">
+                <source>Twitter</source>
+            </trans-unit>
+            <trans-unit id="general.facebook">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="general.instagram">
+                <source>Instagram</source>
+            </trans-unit>
+            <trans-unit id="general.smartphone">
+                <source>Smartphone</source>
+            </trans-unit>
+            <trans-unit id="general.camera">
+                <source>Camera</source>
+            </trans-unit>
+            <trans-unit id="general.present">
+                <source>Present</source>
+            </trans-unit>
+            <trans-unit id="general.lock-open">
+                <source>Lock Open</source>
+            </trans-unit>
+            <trans-unit id="general.selectContainerOpt">
+                <source>Select container option</source>
+            </trans-unit>
+            <trans-unit id="general.selectContainerOpt">
+                <source>Container with background color</source>
+            </trans-unit>
+            <trans-unit id="general.onlyContainer">
+                <source>Only container</source>
+            </trans-unit>
+            <trans-unit id="general.ctacontainer">
+                <source>CTA Container</source>
+            </trans-unit>
+            <trans-unit id="general.bgimage">
+                <source>Background image</source>
+            </trans-unit>
+            <trans-unit id="general.simple-icon">
+                <source>Add Icon text (https://coreui.io/v1/demo/AngularJS_Demo/#!/icons/simple-line-icons)</source>
+            </trans-unit>
+            <trans-unit id="general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="general.addoverlay">
+                <source>Container with opacity</source>
+            </trans-unit>
+            <trans-unit id="general.SocialLinks">
+                <source>Social Links</source>
+            </trans-unit>
+            <trans-unit id="general.SocialBgColor">
+                <source>Social Links Background Color</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

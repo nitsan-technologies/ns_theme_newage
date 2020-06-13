@@ -1,0 +1,28 @@
+<div class="contact">
+  <f:if condition="{content.beforeText} && {content.afterText}">
+    <h2>{content.beforeText}
+      <i class="fa fa-{content.iconInText}"></i>
+      {content.afterText}</h2>
+  </f:if>
+
+  <f:if condition="{content.contact}">
+    <ul class="list-inline list-social">
+      <f:for each="{content.contact}" as="item" iteration="i">
+        <li class="{item.socialIcon} list-inline-item social-{item.socialIcon}">
+          <f:if condition="{item.socialLink}">
+            <f:then>
+              <f:link.typolink parameter="{item.socialLink}" additionalAttributes="{style:'background-color:{item.SocialBgColor};'}">
+                  <i class="fab fa-{item.socialIcon}"></i>
+              </f:link.typolink>
+            </f:then>
+            <f:else>
+              <a href="#">
+                  <i class="fab fa-{item.socialIcon}"></i>
+              </a>
+            </f:else>
+          </f:if>
+        </li>
+      </f:for>
+    </ul>
+  </f:if>
+</div>

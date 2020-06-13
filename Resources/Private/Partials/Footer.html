@@ -1,0 +1,29 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p><f:cObject typoscriptObjectPath="lib.copyright" /></p>
+        <f:render section="FooterMenu" arguments="{FooterMenu: FooterMenu}" />
+    </div>
+</footer>
+
+<f:section name="FooterMenu">
+    <f:if condition="{FooterMenu}">
+        <ul class="list-inline">
+            <f:for each="{FooterMenu}" as="item">                
+                <f:if condition="{item.spacer}">
+                    <f:then>
+                        </ul>
+                        <ul class="list-inline">
+                    </f:then>
+                    <f:else>
+                        <li class="list-inline-item">
+                            <a href="{item.link}" id='nav-item-{item.data.uid}'>
+                                {item.title}
+                            </a>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>

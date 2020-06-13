@@ -1,0 +1,39 @@
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+		<langDatabaseOverlay>1</langDatabaseOverlay>
+	</meta>
+	<sheets>
+		<general>
+			<ROOT>
+				<TCEforms>
+					<label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general</label>
+				</TCEforms>
+                <type>array</type>
+				<el>					
+					<bgcolor>
+						<TCEforms>
+							<exclude>0</exclude>							
+							<label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.selectContainerOpt</label>
+							<config>
+								<type>input</type>
+								<renderType>colorpicker</renderType>
+								<size>10</size>															
+							</config>
+						</TCEforms>
+					</bgcolor>
+					<enableOverlay>
+						<TCEforms>
+							<exclude>0</exclude>							
+							<label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.addoverlay</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</enableOverlay>	
+				</el>
+			</ROOT>
+		</general>
+	</sheets>
+</T3DataStructure>
