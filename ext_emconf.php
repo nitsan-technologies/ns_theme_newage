@@ -2,17 +2,16 @@
 
 // Provide detailed information and depenencies of EXT:ns_theme_newage
 $EM_CONF['ns_theme_newage'] = [
-    'title' => '[NITSAN] New Age Mobile TYPO3 Template',
-    'description' => 'T3 New Age Landing TYPO3 Template is a Bootstrap minimal app landing page. This template has been designed for any need to showcase app or website, app landing page. Live-Demo: https://demo.t3terminal.com/?theme=t3t-newage Pro-Support: https://t3terminal.com/t3-new-age-landing-typo3-template',
+    'title' => '[NITSAN] New Age',
+    'description' => 'The child theme of EXT:ns_basetheme',
     'category' => 'templates',
-    'author' => 'T3: Sonal Chauhan, QA: Siddharth Sheth',
+    'author' => 'NITSAN Technologies Pvt Ltd',
     'author_email' => 'info@nitsan.in',
     'author_company' => 'NITSAN Technologies Pvt Ltd',
     'state' => 'stable',
-    'version' => '2.0.0',
+    'version' => '2.1.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.0.0-10.9.99',
             'ns_basetheme' => '1.0.0-10.9.99',
             'gridelements' => '8.0.0-10.9.99',
         ],

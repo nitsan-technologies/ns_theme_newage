@@ -32,6 +32,7 @@ page {
   }
 
   # <body> class based on backend_layout
+  bodyTagCObject = COA
   bodyTagCObject {
     wrap = <body class="|" id="page-top">
 
