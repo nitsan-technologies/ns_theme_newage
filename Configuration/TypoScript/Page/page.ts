@@ -1,9 +1,9 @@
-
+plugin.ns_theme_newage.settings.logo_text = {$ns_basetheme.website.settings.logo_text}
 // Initiate Page Object
 page = PAGE
 page {
   // Setup favion  
-  shortcutIcon = typo3conf/ext/ns_theme_newage/Resources/Public/img/favicon.ico
+  shortcutIcon = {$ns_basetheme.website.settings.favicon}
 
   // Set viewport
   meta {
