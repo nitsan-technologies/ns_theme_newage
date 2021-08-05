@@ -1,8 +1,8 @@
 # Include the BackendLayouts
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts" extensions="typoscript">
 
 // Include the BackendLayouts
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/GridElements" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/GridElements" extensions="typoscript">
 
 # Remove default custom elements from EXT:ns_basetheme
 TCEFORM {

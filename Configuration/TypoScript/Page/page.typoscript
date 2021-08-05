@@ -13,22 +13,22 @@ page {
   // Initiate all the css-together
   includeCSS {
     20 =
-    50 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/bootstrap/css/bootstrap.min.css
-    80 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/fontawesome-free/css/all.min.css
-    90 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/simple-line-icons/css/simple-line-icons.css        
+    50 = EXT:ns_theme_newage/Resources/Public/vendor/bootstrap/css/bootstrap.min.css
+    80 = EXT:ns_theme_newage/Resources/Public/vendor/fontawesome-free/css/all.min.css
+    90 = EXT:ns_theme_newage/Resources/Public/vendor/simple-line-icons/css/simple-line-icons.css        
     110 = https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
     120 = https://fonts.googleapis.com/css?family=Kaushan+Script
     130 = https://fonts.googleapis.com/css?family=Muli
-    140 = typo3conf/ext/ns_theme_newage/Resources/Public/css/new-age.css
-    150 = typo3conf/ext/ns_theme_newage/Resources/Public/css/custom.css
+    140 = EXT:ns_theme_newage/Resources/Public/css/new-age.css
+    150 = EXT:ns_theme_newage/Resources/Public/css/custom.css
   }
 
   // Initiate all the js-together
   includeJSFooter {
-    10 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/jquery/jquery.min.js
-    20 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/bootstrap/js/bootstrap.bundle.min.js        
-    30 = typo3conf/ext/ns_theme_newage/Resources/Public/vendor/jquery-easing/jquery.easing.min.js        
-    40 = typo3conf/ext/ns_theme_newage/Resources/Public/js/new-age.js
+    10 = EXT:ns_theme_newage/Resources/Public/vendor/jquery/jquery.min.js
+    20 = EXT:ns_theme_newage/Resources/Public/vendor/bootstrap/js/bootstrap.bundle.min.js        
+    30 = EXT:ns_theme_newage/Resources/Public/vendor/jquery-easing/jquery.easing.min.js        
+    40 = EXT:ns_theme_newage/Resources/Public/js/new-age.js
   }
 
   # <body> class based on backend_layout
