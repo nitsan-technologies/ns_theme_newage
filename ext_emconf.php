@@ -9,7 +9,7 @@ $EM_CONF['ns_theme_newage'] = [
     'author_email' => 'info@nitsan.in',
     'author_company' => 'NITSAN Technologies Pvt Ltd',
     'state' => 'stable',
-    'version' => '2.1.2',
+    'version' => '2.1.3',
     'constraints' => [
         'depends' => [
             'typo3' => '8.0.0-10.9.99',
@@ -21,7 +21,5 @@ $EM_CONF['ns_theme_newage'] = [
         'suggests' => [
         ],
     ],
-    //'autoload' => array(
-    //	'classmap' => array('Classes/'),
-    //),
+
 ];
