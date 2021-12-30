@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-24T20:37:42Z">
-		<header/>
-		<body>
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-07-24T20:37:42Z">
+        <header/>
+        <body>
             <trans-unit id="palette.access">
                 <source>Access</source>
             </trans-unit>
@@ -25,7 +25,13 @@
                 <source>Button Text</source>
             </trans-unit>
             <trans-unit id="general.icon">
-                <source><![CDATA[ Add Icon text (https://fontawesome.com/icons?d=gallery&m=free)]]></source>
+                <source>Icons</source>
+            </trans-unit>
+            <trans-unit id="general.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="general.description">
+                <source>Description</source>
             </trans-unit>
             <trans-unit id="general.beforeText">
                 <source>Before icon text</source>
@@ -90,6 +96,6 @@
             <trans-unit id="general.SocialBgColor">
                 <source>Social Links Background Color</source>
             </trans-unit>
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>

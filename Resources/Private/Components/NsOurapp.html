@@ -1,21 +1,33 @@
-<div class="row">
-  <div class="col-md-8 mx-auto">
-    <div class="text-center">
-    	<f:if condition="{content.text}">
-      	<f:format.raw>{content.text}</f:format.raw>
-    	</f:if>
-      <div class="badges">
-      	<f:if condition="{content.link1} && {file2.0} ">
-  	      <f:link.typolink parameter="{content.link1}" class="badge-link">
-  	      	<f:image height="60c" width="203c" image="{file2.0}" />
-  	      </f:link.typolink>
-      	</f:if>
-      	<f:if condition="{content.link2} && {file3.0}">
-  	      <f:link.typolink parameter="{content.link2}" class="badge-link">
-  	      	<f:image height="60c" width="203c" image="{file3.0}" />
-  	      </f:link.typolink>
-      	</f:if>
-      </div>
-    </div>
-  </div>
-</div>
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+	<div class="download-section {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="text-center">
+						<f:if condition="{content.text}">
+							<f:format.raw>{content.text}</f:format.raw>
+						</f:if>
+						<div class="badges">
+							<f:if condition="{image}">
+								<f:for each="{image}" as="item" iteration="i">
+									<f:if condition="{item.properties.link}">
+										<f:then>
+											<f:link.typolink parameter="{item.properties.link}" class="badge-link">
+												<f:image height="60c" width="203c" image="{item}" />
+											</f:link.typolink>
+										</f:then>
+										<f:else>
+											<f:image height="60c" width="203c" image="{item}" />
+										</f:else>
+									</f:if>
+								</f:for>
+							</f:if>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>

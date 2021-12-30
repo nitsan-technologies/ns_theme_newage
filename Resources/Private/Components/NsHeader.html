@@ -1,33 +1,38 @@
-<f:if condition="{file2.0}">
-  <f:then>
-    <header class="masthead" style="background-image: url('{f:uri.image(image: '{file2.0}', treatIdAsReference: 1)}'); ">
-  </f:then>
-  <f:else>
-    <header class="masthead">
-  </f:else>
-</f:if>
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-  <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-lg-7">
-          <div class="header-content mx-auto">
-            <f:if condition="{content.text}">
-                <h1 class="mb-5">{content.text}</h1>
-            </f:if>
-            <f:if condition="{content.btnText} && {content.link}">
-              <f:link.typolink parameter="{content.link}" class="btn btn-outline btn-xl js-scroll-trigger">{content.btnText}</f:link.typolink>
-            </f:if>
-          </div>
-      </div>
-      <f:if condition="{image.0}">
-        <div class="col-lg-5">
-          <div class="device-container">
-            <div class="device-mockup">
-                <f:image image="{image.0}" height="650c" width="323c"  />
+  <f:if condition="{file2.0}">
+    <f:then>
+      <header id="home" class="masthead"
+        style="background-image: url('{f:uri.image(image: '{file2.0}', treatIdAsReference: 1)}'); ">
+    </f:then>
+    <f:else>
+      <header class="masthead">
+    </f:else>
+  </f:if>
+        <div class="container h-100 {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+          <div class="row h-100">
+            <div class="col-lg-7">
+              <div class="header-content mx-auto">
+                <f:if condition="{content.text}">
+                  <h1 class="mb-5">{content.text}</h1>
+                </f:if>
+                <f:if condition="{content.btnText} && {content.link}">
+                  <f:link.typolink parameter="{content.link}" class="btn btn-outline btn-xl js-scroll-trigger">{content.btnText}
+                  </f:link.typolink>
+                </f:if>
+              </div>
             </div>
+            <f:if condition="{image.0}">
+              <div class="col-lg-5">
+                <div class="device-container">
+                  <div class="device-mockup">
+                    <f:image image="{image.0}" height="650c" width="323c" />
+                  </div>
+                </div>
+              </div>
+            </f:if>
           </div>
         </div>
-      </f:if>
-    </div>
-  </div>
-</header>
+  </header>
+
+</html>

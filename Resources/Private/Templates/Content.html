@@ -1,0 +1,43 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="site-main">
+		<section class="pageBanner" style="background-image: url('fileadmin/ns_theme_newage/age-banner.png');">
+	        <div class="container">
+	            <div class="pattern-with-text pattern--small-right">
+	            	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}">
+	                	<h2>{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}</h2>
+	                </f:if>	
+	            </div>
+	        </div>
+	    </section>
+    	<f:switch expression="{data.layout}">
+			<f:case value="1">
+				<section>
+				    <div class="container">
+						<f:cObject typoscriptObjectPath="lib.content"/>
+					</div>
+				</section>	
+			</f:case>
+			<f:case value="2">
+				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')}">
+					<f:then>
+						<section id="cta" style="background-image: url({f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')});">
+					    	<f:cObject typoscriptObjectPath="lib.content"/>
+					    </section>
+					</f:then>
+					<f:else>
+						<section>
+					    	<f:cObject typoscriptObjectPath="lib.content"/>
+					    </section>
+					</f:else>
+				</f:if>	
+			</f:case>
+			<f:defaultCase>
+				<section>
+					<f:cObject typoscriptObjectPath="lib.content"/>
+				</section>	
+			</f:defaultCase>
+		</f:switch>
+	</div>
+</f:section>

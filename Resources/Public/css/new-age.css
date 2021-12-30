@@ -3,7 +3,6 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
-
 html,
 body {
   width: 100%;
@@ -57,11 +56,15 @@ p {
 .space_after_medium{
   padding-bottom: 100px;
   position:  relative;
-
 }
 
-section h2 {
-  font-size: 50px;
+ #cta {
+   padding: 60px 0;
+ }
+
+.download-section {
+  background-color: #fdc539;
+  padding: 150px 0;
 }
 
 #mainNav {
@@ -71,7 +74,7 @@ section h2 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-} 
+}
 #mainNav.navbar-shrink{
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
@@ -88,9 +91,13 @@ section h2 {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
-  padding: 8px 10px;
+  font-size: 20px;
+  padding: 8px 15px;
   color: #222222;
+}
+
+#mainNav .navbar-toggler i {
+  margin-left: 10px;
 }
 
 #mainNav .navbar-nav > li > a {
@@ -120,11 +127,15 @@ section h2 {
   color: #fdcc52;
 }
 
+.badges img {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
     background-color: transparent;
-  } 
+  }
   #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
     color: white;
   }
@@ -154,6 +165,22 @@ section h2 {
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
     color: #fdcc52;
   }
+
+  .contact ul.list-social li a {
+    height: 80px !important;
+    width: 80px !important;
+  }
+
+  .contact ul.list-social li a i {
+    font-size: 40px !important;
+    top: 0px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cta {
+    padding: 180px;
+  }
 }
 
 header.masthead {
@@ -161,7 +188,7 @@ header.masthead {
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  color: white;  
+  color: white;
 }
 
 header.masthead .header-content {
@@ -197,6 +224,7 @@ header.masthead .device-container .screen img {
 .large-font{
   color: #fff;
   font-size: 50px;
+  margin-bottom: 50px;
 }
 section .frame-type-text{
   position: relative;
@@ -261,21 +289,9 @@ section .frame-type-text{
     margin-bottom: 0;
   }
    h2.section-heading {
-<<<<<<< HEAD
-    font-size: 70px;    
+    font-size: 50px;
   }
 }
-
-=======
-    font-size: 70px;
-    margin-bottom: 60px;
-  }
-}
-
-.section-heading {
-  margin-bottom: 100px;
-}
->>>>>>> 931504db9daa197dc8eba31bc0e93e3fdf1e1abf
 
 .section-heading h2 {
   margin-top: 0;
@@ -285,8 +301,7 @@ section .frame-type-text{
   margin-bottom: 0;
 }
 
-
- .feature-item {
+.feature-item {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -318,13 +333,50 @@ section .frame-type-text{
   }
 }
 
-.overlay {
+.headline-block {
+  margin-bottom: 60px;
+}
+
+.headline-block h2 {
+  color: #000;
+}
+
+.feature-image {
+  text-align: center;
+}
+
+.feature-image img {
+  width: 100%;
+}
+
+.feature-div {
+  margin-top: 30px;
+}
+
+#cta {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}
+
+#cta::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact {
+  background-color: #fdc539;
+  padding: 100px 0;
+}
+
+.device-mockup img {
+  width: 100%;
 }
 
 .contact,.device-mockup{
@@ -345,12 +397,18 @@ section .frame-type-text{
   margin-bottom: 0;
 }
 
+.contact ul.list-social li a i {
+  font-size: 30px;
+  position: relative;
+  top: -14px;
+}
+
 .contact ul.list-social li a {
   font-size: 40px;
   line-height: 80px;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   color: white;
   border-radius: 100%;
 }
@@ -390,7 +448,7 @@ footer {
 }
 
 footer p {
-  font-size: 12px;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -399,7 +457,7 @@ footer ul {
 }
 
 footer ul li a {
-  font-size: 12px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.3);
 }
 

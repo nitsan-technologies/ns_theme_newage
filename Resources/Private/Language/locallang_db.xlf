@@ -10,35 +10,41 @@
                 <source>Headline</source>
             </trans-unit>
             <trans-unit id="wizard.ns_header">
-                <source>[Component] Header Section</source>
+                <source>Header Section</source>
             </trans-unit>
             <trans-unit id="wizard.ns_header.desc">
                 <source>Add Text, Image with button link</source>
             </trans-unit>
             <trans-unit id="wizard.ns_ourapp">
-                <source>[Component] Our App</source>
+                <source>Our App</source>
             </trans-unit>
             <trans-unit id="wizard.ns_ourapp.desc">
                 <source>Share your app link</source>
             </trans-unit>
             <trans-unit id="wizard.ns_featuremob">
-                <source>[Component] Feature Mobile</source>
+                <source>Feature Mobile</source>
             </trans-unit>
             <trans-unit id="wizard.ns_featuremob.desc">
                 <source>Add your mobile screen look</source>
             </trans-unit>
-            <trans-unit id="wizard.ns_featureitem">
-                <source>[Component] Feature Item</source>
+            <trans-unit id="wizard.ns_feature">
+                <source>Feature</source>
             </trans-unit>
-            <trans-unit id="wizard.ns_featureitem.desc">
-                <source>Add your feature item</source>
+            <trans-unit id="wizard.ns_feature.desc">
+                <source>Add your features</source>
             </trans-unit>
             <trans-unit id="wizard.ns_contact">
-                <source>[Component] Contact</source>
+                <source>Contact</source>
             </trans-unit>
             <trans-unit id="wizard.ns_contact.desc">
                 <source>Add contact detail</source>
-            </trans-unit>            
+            </trans-unit>  
+            <trans-unit id="wizard.ns_cta">
+                <source>CTA</source>
+            </trans-unit>
+            <trans-unit id="wizard.ns_cta.desc">
+                <source>Call To Action</source>
+            </trans-unit>          
 		</body>
 	</file>
 </xliff>

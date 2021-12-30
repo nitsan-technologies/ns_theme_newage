@@ -1,24 +1,22 @@
-<f:if condition="{flexformData.beforeText} && {flexformData.afterText}">
-  <h2>{flexformData.beforeText}
-    <i class="{flexformData.iconInText}"></i>
-    {flexformData.afterText}</h2>
-</f:if>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<ul class="list-inline list-social">
-  <f:for each="{flexformData.contact}" as="item" iteration="i">
-    <li class="list-inline-item social-{item.socialIcon}">
-      <f:if condition="{item.socialLink}">
-        <f:then>
-          <f:link.typolink parameter="{item.socialLink}">
-              <i class="{item.socialIcon}"></i>
-          </f:link.typolink>
-        </f:then>
-        <f:else>
-          <a href="#">
-              <i class="{item.socialIcon}"></i>
-          </a>
-        </f:else>
-      </f:if>
-    </li>
-  </f:for>
-</ul>
+  <div class="ns-backend-preview">
+    <h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_contact" /></b></h2>
+    <f:if condition="{flexformData.beforeText} && {flexformData.afterText}">
+      <h1 class="text-center">{flexformData.beforeText}
+        <i class="fa {flexformData.iconInText}"></i>
+        {flexformData.afterText}
+      </h1>
+    </f:if>
+    <ul class="list-inline list-social text-center">
+      <f:for each="{flexformData.contact}" as="item" iteration="i">
+        <li class="list-inline-item social">
+          <f:if condition="{item.container.socialIcon}">
+            <i class="fa {item.container.socialIcon}"></i>
+          </f:if>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+
+</html>

@@ -1,23 +1,23 @@
-<style type="text/css">	
-	#download .ml-auto, .mx-auto {
-	    margin-left: auto!important;
-	}
-	#download .mr-auto, .mx-auto {
-	    margin-right: auto!important;
-	}
-	#download h2 {
-	    font-size: 70px;
-	}
-</style>
-<section style="position: relative;   padding: 150px 0;" class="" id="download">
-    <div class="container">
-		<div class="row">
-		  <div class="col-md-8 mx-auto">
-		     <f:format.html>{flexformData.text}</f:format.html>
-		    <div class="badges">
-		      
-		    </div>
-		  </div>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<div class="ns-backend-preview">
+		<h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_ourapp" /></b></h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mx-auto">
+					<div class="download-content text-center">
+						<f:format.html>{flexformData.text}</f:format.html>
+					</div>
+					<div class="download-image">
+						<f:if condition="{image}">
+							<f:for each="{image}" as="item" iteration="i">
+								<f:image height="60c" width="203c" image="{item}" />
+							</f:for>
+						</f:if>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</section>
+
+</html>

@@ -6,12 +6,14 @@
                     <sheetTitle>Fields</sheetTitle>
                 </TCEforms>
                 <type>array</type>
-                <el>                    
+                <el>
                     <beforeText>
                         <TCEforms>
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.beforeText</label>
                             <config>
                                 <type>input</type>
+                                <size>30</size>
+                                <eval>trim,required</eval>
                             </config>
                         </TCEforms>
                     </beforeText>
@@ -19,7 +21,11 @@
                         <TCEforms>
                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.icon</label>
                             <config>
-                                <type>input</type>
+                                <type>select</type>
+                                <itemsProcFunc>NITSAN\NsThemeNewage\Backend\ItemsProcFunc->getFaIconsList</itemsProcFunc>
+                                <renderType>selectSingle</renderType>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
                             </config>
                         </TCEforms>
                     </iconInText>
@@ -28,6 +34,8 @@
                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.afterText</label>
                             <config>
                                 <type>input</type>
+                                <size>30</size>
+                                <eval>trim,required</eval>
                             </config>
                         </TCEforms>
                     </afterText>
@@ -41,12 +49,16 @@
                                 <type>array</type>
                                 <el>
                                     <socialIcon>
-                                      <TCEforms>
-                                          <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.icon</label>
-                                          <config>
-                                              <type>input</type>
-                                          </config>
-                                      </TCEforms>
+                                        <TCEforms>
+                                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex:general.icon</label>
+                                            <config>
+                                                <type>select</type>
+                                                <itemsProcFunc>NITSAN\NsThemeNewage\Backend\ItemsProcFunc->getFabIconsList</itemsProcFunc>
+                                                <renderType>selectSingle</renderType>
+                                                <minitems>0</minitems>
+                                                <maxitems>1</maxitems>
+                                            </config>
+                                        </TCEforms>
                                     </socialIcon>
                                     <socialLink>
                                         <TCEforms>
@@ -70,7 +82,7 @@
                                     </socialLink>
                                     <SocialBgColor>
                                         <TCEforms>
-                                            <exclude>0</exclude>                            
+                                            <exclude>0</exclude>
                                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialBgColor</label>
                                             <config>
                                                 <type>input</type>

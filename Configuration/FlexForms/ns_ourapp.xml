@@ -6,15 +6,17 @@
                     <sheetTitle>Fields</sheetTitle>
                 </TCEforms>
                 <type>array</type>
-                <el>                    
+                <el>
                     <text>
                         <TCEforms>
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.text
                             </label>
                             <config>
                                 <type>text</type>
+                                <size>30</size>
+                                <eval>trim,required</eval>
                                 <enableRichtext>1</enableRichtext>
-                            </config>                            
+                            </config>
                         </TCEforms>
                     </text>
                     <file2>
@@ -22,8 +24,8 @@
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image</label>
                             <config>
                                 <type>inline</type>
-                                <minitems>0</minitems>
-                                <maxitems>1</maxitems>
+                                <minitems>1</minitems>
+                                <maxitems>2</maxitems>
                                 <foreign_table>sys_file_reference</foreign_table>
                                 <foreign_table_field>tablenames</foreign_table_field>
                                 <foreign_label>uid_local</foreign_label>
@@ -47,7 +49,7 @@
                                     </numIndex>
                                 </foreign_types>
                                 <foreign_match_fields>
-                                    <fieldname>file2</fieldname> <!-- CAUTION!! Replace "fal" with the variable name of this field! -->
+                                    <fieldname>image</fieldname> <!-- CAUTION!! Replace "fal" with the variable name of this field! -->
                                 </foreign_match_fields>
                                 <appearance type="array">
                                     <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
@@ -90,121 +92,7 @@
                                 </overrideChildTca>
                             </config>
                         </TCEforms>
-                    </file2>                    
-                    <link1>
-                        <TCEforms>
-                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link
-                            </label>
-                            <exclude>0</exclude>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputLink</renderType>
-                                <!--
-                                <fieldControl>
-                                    <linkPopup>
-                                        <options>
-                                            <blindLinkOptions>file,folder,mail,page,spec</blindLinkOptions>
-                                        </options>
-                                    </linkPopup>
-                                </fieldControl>
-                                -->
-                            </config>
-                        </TCEforms>
-                    </link1>
-                    <file3>
-                        <TCEforms>
-                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image</label>
-                            <config>
-                                <type>inline</type>
-                                <minitems>0</minitems>
-                                <maxitems>1</maxitems>
-                                <foreign_table>sys_file_reference</foreign_table>
-                                <foreign_table_field>tablenames</foreign_table_field>
-                                <foreign_label>uid_local</foreign_label>
-                                <foreign_sortby>sorting_foreign</foreign_sortby>
-                                <foreign_field>uid_foreign</foreign_field>
-                                <foreign_selector>uid_local</foreign_selector>
-                                <foreign_selector_fieldTcaOverride>
-                                    <config>
-                                        <appearance>
-                                            <elementBrowserType>file</elementBrowserType>
-                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg</elementBrowserAllowed>
-                                        </appearance>
-                                    </config>
-                                </foreign_selector_fieldTcaOverride>
-                                <foreign_types type="array">
-                                    <numIndex index="0">
-                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
-                                    </numIndex>
-                                    <numIndex index="2">
-                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
-                                    </numIndex>
-                                </foreign_types>
-                                <foreign_match_fields>
-                                    <fieldname>file3</fieldname> <!-- CAUTION!! Replace "fal" with the variable name of this field! -->
-                                </foreign_match_fields>
-                                <appearance type="array">
-                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
-                                    <headerThumbnail>
-                                        <field>uid_local</field>
-                                        <height>64</height>
-                                        <width>64</width>
-                                    </headerThumbnail>
-                                    <enabledControls>
-                                        <info>1</info>
-                                        <new>0</new>
-                                        <dragdrop>0</dragdrop>
-                                        <sort>1</sort>
-                                        <hide>0</hide>
-                                        <delete>1</delete>
-                                        <localize>1</localize>
-                                    </enabledControls>
-                                    <createNewRelationLinkTitle>LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference</createNewRelationLinkTitle>
-                                </appearance>
-                                <behaviour>
-                                    <localizationMode>select</localizationMode>
-                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
-                                </behaviour>
-                                <overrideChildTca>
-                                    <columns type="array">
-                                        <uid_local type="array">
-                                            <config type="array">
-                                                <appearance type="array">
-                                                    <elementBrowserType>file</elementBrowserType>
-                                                    <elementBrowserAllowed>jpg,png,svg,jpeg,gif</elementBrowserAllowed>
-                                                </appearance>
-                                            </config>
-                                        </uid_local>
-                                    </columns>
-                                    <types type="array">
-                                        <numIndex index="2">
-                                            <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
-                                        </numIndex>
-                                    </types>
-                                </overrideChildTca>
-                            </config>
-                        </TCEforms>
-                    </file3>
-                    <link2>
-                        <TCEforms>
-                            <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link
-                            </label>
-                            <exclude>0</exclude>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputLink</renderType>
-                                <!--
-                                <fieldControl>
-                                    <linkPopup>
-                                        <options>
-                                            <blindLinkOptions>file,folder,mail,page,spec</blindLinkOptions>
-                                        </options>
-                                    </linkPopup>
-                                </fieldControl>
-                                -->
-                            </config>
-                        </TCEforms>
-                    </link2>
+                    </file2>
                 </el>
             </ROOT>
         </sDEF>

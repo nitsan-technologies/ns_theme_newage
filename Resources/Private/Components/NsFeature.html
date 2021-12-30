@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+  <div class="{f:if(condition: data.space_before_class, then: ' space_before_{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' space_after_{data.space_after_class}')}">
+    <div class="container">
+      <div class="headline-block text-center">
+        <f:if condition="{content.headline}">
+          <h2>{content.headline}</h2>
+        </f:if>
+        <f:if condition="{content.subheadline}">
+          <p class="text-muted">{content.subheadline}</p>
+        </f:if>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <f:if condition="{image}">
+            <f:for each="{image}" as="item" iteration="i">
+              <div class="feature-image">
+                <f:image width="323c" height="650c" image="{item}" />
+              </div>
+            </f:for>
+          </f:if>
+        </div>
+        <div class="col-sm-6 col-lg-8">
+          <div class="feature-div">
+            <div class="row">
+              <f:for each="{content.contact}" as="item" iteration="i">
+                <div class="col-sm-12 col-lg-6">
+                  <div class="feature-item">
+                    <f:if condition="{item.socialIcon}">
+                      <i class="{item.socialIcon}"></i>
+                    </f:if>
+                    <f:if condition="{item.title}">
+                      <h3>{item.title}</h3>
+                    </f:if>
+                    <f:if condition="{item.text}">
+                      <p class="text-muted">{item.text}</p>
+                    </f:if>
+                  </div>
+                </div>
+              </f:for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</html>

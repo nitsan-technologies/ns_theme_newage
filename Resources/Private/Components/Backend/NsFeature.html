@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+  <link rel="stylesheet" type="text/css" href="/typo3conf/ext/ns_theme_newage/Resources/Public/vendor/simple-line-icons/css/simple-line-icons.css?1637210195" media="all">
+  
+  <div class="ns-backend-preview">
+    <h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_feature" /></b></h2>
+    <f:if condition="{flexformData.headline}">
+      <h2 class="text-center">{flexformData.headline}</h2>
+    </f:if>
+    <f:if condition="{flexformData.subheadline}">
+      <p class="text-center">{flexformData.subheadline}</p>
+    </f:if>
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <f:if condition="{image}">
+          <f:for each="{image}" as="item" iteration="i">
+            <div class="feature-image">
+              <f:image width="323c" height="650c" image="{item}" />
+            </div>
+          </f:for>
+        </f:if>
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <div class="feature-div">
+          <div class="row">
+            <f:for each="{flexformData.contact}" as="item">
+              <div class="feture-items text-center">
+                <div class="col-lg-6 col-sm-12">
+                  <f:if condition="{item.container.socialIcon}">
+                    <div class="feture-icon">
+                      <i class="{item.container.socialIcon}"></i>
+                    </div>
+                  </f:if>
+                  <f:if condition="{item.container.title}">
+                    <h3 class="text-center">{item.container.title}</h3>
+                  </f:if>
+                  <f:if condition="{item.container.text}">
+                    <p class="text-center">{item.container.text}</p>
+                  </f:if>
+                </div>
+              </div>
+            </f:for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</html>

@@ -1,8 +1,5 @@
 # Include the BackendLayouts
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts" extensions="typoscript">
-
-// Include the BackendLayouts
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ns_theme_newage/Configuration/PageTSconfig/GridElements" extensions="typoscript">
+@import "EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts"
 
 # Remove default custom elements from EXT:ns_basetheme
 TCEFORM {
@@ -12,10 +9,13 @@ TCEFORM {
             removeItems = 2,3
         }
     }
-    pages{
-    	layout{
-    		altLabels.1 = Only current page content
-            removeItems = 2,3
-    	}
+    pages {
+        layout {
+            altLabels {
+                1 = Only current page content
+                2 = Without Container
+            }    
+            removeItems = 3
+        }
     }
 }

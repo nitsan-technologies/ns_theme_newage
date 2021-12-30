@@ -1,25 +1,33 @@
-<header class="masthead" style="color: black;">
-  <div class="container h-100">
-    <div class="row h-100">
-		<div class="col-lg-7">
-		      <div class="header-content mx-auto">
-		        <f:if condition="{flexformData.text}">
-		            <h1 class="mb-5">{flexformData.text}</h1>
-		        </f:if>
-		        <f:if condition="{flexformData.btnText} && {flexformData.link}">
-		          <a href="#" class="btn btn-outline btn-xl js-scroll-trigger">{flexformData.btnText}</a>
-		        </f:if>
-		      </div>
-		</div>      
-	  	<div class="col-lg-5" style="text-align: center;">
-	      <div class="device-container">
-	        <div class="device-mockup">
-	        	<f:for each="{image}" as="img">
-			    	<f:image height="350px" width="200px" src="fileadmin{img.originalFile.identifier}" />
-				</f:for>
-	        </div>
-	      </div>
-	    </div>      
-    </div>
-  </div>
-</header>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<div class="ns-backend-preview">
+		<h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_header" /></b></h2>
+		<f:variable name="bg-image">
+			{f:uri.image(src:'{flexformData.image}')}
+		</f:variable>
+		<div class="container h-100" style="{f:if(condition: flexformData.image, then:'background-image:url({bg-image})')}">
+			<div class="header-teaser">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<div class="header-content">
+							<f:if condition="{flexformData.text}">
+								<h1 class="mb-5">{flexformData.text}</h1>
+							</f:if>
+							<f:if condition="{flexformData.btnText} && {flexformData.link}">
+								<button class="btn">{flexformData.btnText}</button>
+							</f:if>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-12">
+						<div class="header-image">
+							<f:for each="{image}" as="img">
+								<f:image height="350px" width="200px" src="fileadmin{img.originalFile.identifier}" />
+							</f:for>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>

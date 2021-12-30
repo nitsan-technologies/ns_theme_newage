@@ -2,14 +2,22 @@
 
 <f:section name="main">	
 	<!-- Render main content colpos=0 -->
-	<f:if condition="{data.layout}==1">
-		<f:then>
-			<f:cObject typoscriptObjectPath="lib.content"/>
-		</f:then>
-		<f:else>
+	<f:switch expression="{data.layout}">
+		<f:case value="1">
+		    <section>
+		    	<div class="container">
+		    		<f:cObject typoscriptObjectPath="lib.content"/>
+		    	</div>
+		    </section>
+		</f:case>
+		<f:case value="2">
+		    <section>
+		    	<f:cObject typoscriptObjectPath="lib.content"/>
+		    </section>
+		</f:case>
+		<f:defaultCase>
 		    <f:cObject typoscriptObjectPath="lib.content"/>
 		    <f:cObject typoscriptObjectPath="lib.onePageScrollContent"/>
-		</f:else>
-	</f:if>
-
+		</f:defaultCase>
+	</f:switch>
 </f:section>

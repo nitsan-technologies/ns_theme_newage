@@ -1,7 +1,7 @@
 {
   "name": "nitsan/ns-theme-newage",
   "type": "typo3-cms-extension",
-  "description": "The child theme of EXT:ns_basetheme",
+  "description": "T3 New Age Landing TYPO3 Template is a Bootstrap minimal app landing page. This template has been designed for any need to showcase app or website, app landing page. Built it with twitter bootstrap 3, HTML5, CSS3 and SASS.",
   "keywords": [
     "TYPO3 CMS",
     "bootstrap",
@@ -23,9 +23,8 @@
   },
   "license": "MIT",
   "require": {
-    "typo3/cms-core": ">=9.0.0",
-    "gridelementsteam/gridelements": "^9 || ^10",
-    "nitsan/ns-basetheme": ">=9.0.0"
+    "typo3/cms-core": ">=10.0.0",
+    "nitsan/ns-basetheme": ">=10.0.0"
   },
   "replace": {
       "nitsan/ns-theme-child": "self.version"

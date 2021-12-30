@@ -1,28 +1,28 @@
-<div class="contact">
-  <f:if condition="{content.beforeText} && {content.afterText}">
-    <h2>{content.beforeText}
-      <i class="fa fa-{content.iconInText}"></i>
-      {content.afterText}</h2>
-  </f:if>
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-  <f:if condition="{content.contact}">
-    <ul class="list-inline list-social">
-      <f:for each="{content.contact}" as="item" iteration="i">
-        <li class="{item.socialIcon} list-inline-item social-{item.socialIcon}">
-          <f:if condition="{item.socialLink}">
-            <f:then>
-              <f:link.typolink parameter="{item.socialLink}" additionalAttributes="{style:'background-color:{item.SocialBgColor};'}">
-                  <i class="fab fa-{item.socialIcon}"></i>
-              </f:link.typolink>
-            </f:then>
-            <f:else>
-              <a href="#">
-                  <i class="fab fa-{item.socialIcon}"></i>
-              </a>
-            </f:else>
-          </f:if>
-        </li>
-      </f:for>
-    </ul>
-  </f:if>
-</div>
+  <div class="contact {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+    <f:if condition="{content.beforeText} && {content.afterText}">
+      <h2>{content.beforeText}
+        <i class="fa {content.iconInText}"></i>
+        {content.afterText}
+      </h2>
+    </f:if>
+
+    <f:if condition="{content.contact}">
+      <ul class="list-inline list-social">
+        <f:for each="{content.contact}" as="item" iteration="i">
+          <f:if condition="{item.socialIcon}">
+            <li class="list-inline-item">
+              <f:if condition="{item.socialLink}">
+                <f:link.typolink parameter="{item.socialLink}" additionalAttributes="{style:'background-color:{item.SocialBgColor};'}">
+                  <i class="{item.socialIcon}"></i>
+                </f:link.typolink>
+              </f:if>
+            </li>
+          </f:if>  
+        </f:for>
+      </ul>
+    </f:if>
+  </div>
+
+</html>
