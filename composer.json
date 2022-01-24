@@ -27,7 +27,7 @@
     "nitsan/ns-basetheme": ">=10.0.0"
   },
   "replace": {
-      "nitsan/ns-theme-child": "self.version"
+      "typo3-ter/ns-theme-child": "self.version"
   },
   "config": {
     "vendor-dir": ".Build/vendor/",
