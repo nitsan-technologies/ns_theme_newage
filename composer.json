@@ -23,11 +23,11 @@
   },
   "license": "MIT",
   "require": {
-    "typo3/cms-core": "^10.0  || ^11.0 "
+    "typo3/cms-core": "^10.0  || ^11.0"
     "nitsan/ns-basetheme": ">=10.0.0"
   },
   "replace": {
-      "typo3-ter/ns-theme-child": "self.version"
+      "typo3-ter/ns-theme-newage": "self.version"
   },
   "config": {
     "vendor-dir": ".Build/vendor/",
