@@ -14,7 +14,6 @@
                             <config>
                                 <type>text</type>
                                 <size>30</size>
-                                <eval>trim,required</eval>
                                 <enableRichtext>1</enableRichtext>
                             </config>
                         </TCEforms>
