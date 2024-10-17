@@ -2,13 +2,13 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+               
                     <sheetTitle>Fields</sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>
                     <text>
-                        <TCEforms>
+                       
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.text
                             </label>
                             <config>
@@ -16,10 +16,10 @@
                                 <size>30</size>
                                 <enableRichtext>1</enableRichtext>
                             </config>
-                        </TCEforms>
+                        
                     </text>
                     <file2>
-                        <TCEforms>
+                       
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image</label>
                             <config>
                                 <type>inline</type>
@@ -90,7 +90,7 @@
                                     </types>
                                 </overrideChildTca>
                             </config>
-                        </TCEforms>
+                        
                     </file2>
                 </el>
             </ROOT>

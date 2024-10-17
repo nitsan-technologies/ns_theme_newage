@@ -2,13 +2,13 @@
   <sheets>
     <sDEF>
       <ROOT>
-        <TCEforms>
+        
             <sheetTitle>Fields</sheetTitle>
-        </TCEforms>
+       
         <type>array</type>
         <el>
           <headline>
-            <TCEforms>
+            
               <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.headline</label>
               <exclude>0</exclude>
               <config>
@@ -16,10 +16,10 @@
                 <size>30</size>
                 <eval>trim,required</eval>
               </config>
-            </TCEforms>
+           
           </headline>
           <subHeadline>
-            <TCEforms>
+            
               <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.subheadline</label>
               <exclude>0</exclude>
               <config>
@@ -27,20 +27,20 @@
                 <size>30</size>
                 <eval>trim,required</eval>
               </config>
-            </TCEforms>
+           
           </subHeadline>
           <btntxt>
-            <TCEforms>
+            
               <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.btnText</label>
               <config>
                   <type>input</type>
                   <size>30</size>
                   <eval>trim</eval>
               </config>
-            </TCEforms>
+           
           </btntxt>
           <btnlink>
-            <TCEforms>
+            
                 <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link</label>
                 <config>
                     <type>input</type>
@@ -57,7 +57,7 @@
                         </linkPopup>
                     </fieldControl>
                 </config>
-            </TCEforms>
+           
           </btnlink>
         </el>
       </ROOT>

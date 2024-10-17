@@ -2,13 +2,13 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+                
                     <sheetTitle>Fields</sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>                    
                     <text>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.text
                             </label>
                             <config>
@@ -16,10 +16,10 @@
                                 <size>30</size>
                                 <eval>trimm,required</eval>
                             </config>
-                        </TCEforms>
+                        
                     </text>
                     <file2>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.bgimage</label>
                             <config>
                                 <type>inline</type>
@@ -90,10 +90,10 @@
                                     </types>
                                 </overrideChildTca>
                             </config>
-                        </TCEforms>
+                        
                     </file2>
                     <image>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image</label>
                             <config>
                                 <type>inline</type>
@@ -164,19 +164,19 @@
                                     </types>
                                 </overrideChildTca>
                             </config>
-                        </TCEforms>
+                        
                     </image>
                     <btnText>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.btnText
                             </label>
                             <config>
                                 <type>input</type>                                
                             </config>
-                        </TCEforms>
+                        
                     </btnText>
                     <link>
-                        <TCEforms>
+                        
                             <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link
                             </label>
                             <exclude>0</exclude>
@@ -193,7 +193,7 @@
                                 </fieldControl>
                                 -->
                             </config>
-                        </TCEforms>
+                        
                     </link>
                 </el>
             </ROOT>

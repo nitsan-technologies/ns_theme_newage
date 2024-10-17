@@ -2,31 +2,31 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
+               
                     <sheetTitle>Fields</sheetTitle>
-                </TCEforms>
+                
                 <type>array</type>
                 <el>
                     <headline>
-                      <TCEforms>
+                     
                         <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.headline</label>
                         <exclude>0</exclude>
                         <config>
                           <type>input</type>
                         </config>
-                      </TCEforms>
+                      
                     </headline>
                     <subheadline>
-                      <TCEforms>
+                     
                         <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.subheadline</label>
                         <exclude>0</exclude>
                         <config>
                           <type>input</type>
                         </config>
-                      </TCEforms>
+                      
                     </subheadline>
                     <image>
-                      <TCEforms>
+                     
                           <label>Image</label>
                           <config>
                               <type>inline</type>
@@ -131,7 +131,7 @@
                                   </types>
                               </overrideChildTca>
                           </config>
-                      </TCEforms>
+                      
                     </image>
                     <contact>
                         <section>1</section>
@@ -143,7 +143,7 @@
                                 <type>array</type>
                                 <el>
                                   <socialIcon>
-                                    <TCEforms>
+                                   
                                         <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex:general.icon</label>
                                         <config>
                                             <type>select</type>
@@ -152,25 +152,25 @@
                                             <minitems>0</minitems>
                                             <maxitems>1</maxitems>
                                         </config>
-                                    </TCEforms>
+                                    
                                     </socialIcon>
                                   <title>
-                                    <TCEforms>
+                                   
                                       <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.title</label>
                                       <exclude>0</exclude>
                                       <config>
                                         <type>input</type>
                                       </config>
-                                    </TCEforms>
+                                    
                                   </title>
                                   <text>
-                                    <TCEforms>
+                                   
                                         <label>LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.description</label>
                                         <exclude>0</exclude>
                                         <config>
                                           <type>text</type>
                                         </config>
-                                    </TCEforms>
+                                    
                                   </text>
                                 </el>
                             </container>
