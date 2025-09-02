@@ -1,6 +1,6 @@
 name: nitsan/ns-contact
 typeName: nitsan_nscontact
-group: ns_theme_newage
+group: newage_content_blocks
 prefixFields: false
 prefixType: vendor
 fields:

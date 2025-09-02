@@ -1,6 +1,6 @@
 name: nitsan/ns-ourapp
 typeName: nitsan_nsourapp
-group: ns_theme_newage
+group: newage_content_blocks
 prefixFields: false
 prefixType: vendor
 fields:

@@ -1,6 +1,6 @@
 name: nitsan/ns-cta
 typeName: nitsan_nscta
-group: ns_theme_newage
+group: newage_content_blocks
 prefixFields: false
 prefixType: vendor
 fields:

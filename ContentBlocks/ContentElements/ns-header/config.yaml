@@ -1,6 +1,6 @@
 name: nitsan/ns-header
 typeName: nitsan_nsheader
-group: ns_theme_newage
+group: newage_content_blocks
 prefixFields: false
 prefixType: vendor
 fields:

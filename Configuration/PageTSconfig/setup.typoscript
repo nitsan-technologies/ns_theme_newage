@@ -19,3 +19,7 @@ TCEFORM {
         }
     }
 }
+
+mod.wizards.newContentElement.wizardItems {
+    newage_content_blocks.header = LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang.xlf:contentBlocks.groupName
+}
