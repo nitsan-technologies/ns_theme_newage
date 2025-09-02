@@ -1,0 +1,28 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+  <div class="contact {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+    <f:if condition="{data.beforeText} && {data.afterText}">
+      <h2>{data.beforeText}
+        <i class="fa {data.iconInText}"></i>
+        {data.afterText}
+      </h2>
+    </f:if>
+ 
+    <f:if condition="{data.contact}">
+      <ul class="list-inline list-social">
+        <f:for each="{data.contact}" as="item" iteration="i">
+          <f:if condition="{item.socialIcon}">
+            <li class="list-inline-item">
+              <f:if condition="{item.socialLink}">
+                <f:link.typolink parameter="{item.socialLink}" additionalAttributes="{style:'background-color:{item.SocialBgColor};'}">
+                  <i class="{item.socialIcon}"></i>
+                </f:link.typolink>
+              </f:if>
+            </li>
+          </f:if>
+        </f:for>
+      </ul>
+    </f:if>
+  </div>
+  
+
+</html>

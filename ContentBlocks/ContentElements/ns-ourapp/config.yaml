@@ -1,0 +1,36 @@
+name: nitsan/ns-ourapp
+typeName: nitsan_nsourapp
+group: ns_theme_newage
+prefixFields: false
+prefixType: vendor
+fields:
+  -
+    identifier: text
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.text'
+    type: Textarea
+    rows: null
+    enableRichtext: true
+  -
+    identifier: image
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image'
+    type: File
+    allowed:
+      - jpg
+      - png
+      - svg
+      - jpeg
+      - gif
+    minitems: 1
+    maxitems: 2
+  -
+    identifier: appearance_tab
+    type: Tab
+    label: Appearance
+  -
+    identifier: space_before_class
+    type: Text
+    useExistingField: true
+  -
+    identifier: space_after_class
+    type: Text
+    useExistingField: true

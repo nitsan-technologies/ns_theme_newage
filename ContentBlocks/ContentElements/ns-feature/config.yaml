@@ -1,0 +1,60 @@
+name: nitsan/ns-feature
+typeName: nitsan_nsfeature
+group: ns_theme_newage
+prefixFields: false
+prefixType: vendor
+fields:
+  -
+    identifier: header
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.headline'
+    type: Text
+  -
+    identifier: subheader
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.subheadline'
+    type: Text
+  -
+    identifier: image
+    label: Image
+    type: File
+    allowed:
+      - jpg
+      - png
+      - svg
+      - jpeg
+      - gif
+    minitems: 1
+    maxitems: 1
+  -
+    identifier: contact_feature
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialLinks'
+    type: Collection
+    fields:
+      -
+        identifier: socialIcon
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex:general.icon'
+        type: Select
+        itemsProcFunc: NITSAN\NsThemeNewage\Backend\ItemsProcFunc->getIconsList
+        renderType: selectSingle
+        maxitems: 1
+      -
+        identifier: title
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.title'
+        type: Text
+      -
+        identifier: text
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.description'
+        type: Textarea
+        rows: null
+        enableRichtext: false
+  -
+    identifier: appearance_tab
+    type: Tab
+    label: Appearance
+  -
+    identifier: space_before_class
+    type: Text
+    useExistingField: true
+  -
+    identifier: space_after_class
+    type: Text
+    useExistingField: true
