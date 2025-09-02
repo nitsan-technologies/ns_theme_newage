@@ -381,14 +381,14 @@ class ContentBlockMigration
         ];
         $this->updateTtContent($data, $uid, $pid);
          if (!empty($parsed['contact'])) {
-            foreach (array_reverse($parsed['contact']) as $contact_feature) {
+            foreach (array_reverse($parsed['contact']) as $contactFeature) {
                 $randomString = StringUtility::getUniqueId('NEW');
                 $data = [
                     'pid' => $pid,
                     'foreign_table_parent_uid' => $uid,
-                    'socialIcon' => $contact_feature['socialIcon'] ?? '',
-                    'title' => $contact_feature['title'] ?? '',
-                    'text' => $contact_feature['text'] ?? '',
+                    'socialIcon' => $contactFeature['socialIcon'] ?? '',
+                    'title' => $contactFeature['title'] ?? '',
+                    'text' => $contactFeature['text'] ?? '',
                 ];
 
                 $this->contentBlocksRepository->insertDataWithDataHandler($data, $randomString, 'contact_feature');
