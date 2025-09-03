@@ -3,7 +3,6 @@
 	<div class="ns-backend-preview">
 		<h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_header" /></b></h2>
 		<f:variable name="bg-image">
-		<f:debug>{data.file}</f:debug>
 			{f:uri.image(image:'{data.file2.0}' , absolute=1)}
 		</f:variable>
 		<div class="container h-100" style="{f:if(condition: data.file2.0, then:'background-image:url({bg-image})')}">
