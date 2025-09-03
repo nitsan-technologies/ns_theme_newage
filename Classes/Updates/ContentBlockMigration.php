@@ -60,7 +60,7 @@ final class ContentBlockMigration implements UpgradeWizardInterface
             )
             ->executeQuery()
             ->fetchOne();
-        return $count =True;
+        return $count > 0;
     }
     public function getPrerequisites(): array
     {
