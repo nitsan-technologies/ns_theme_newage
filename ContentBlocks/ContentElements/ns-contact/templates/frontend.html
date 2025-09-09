@@ -6,23 +6,20 @@
         {data.afterText}
       </h2>
     </f:if>
- 
     <f:if condition="{data.contact}">
       <ul class="list-inline list-social">
         <f:for each="{data.contact}" as="item" iteration="i">
           <f:if condition="{item.socialIcon}">
             <li class="list-inline-item">
-              <f:if condition="{item.socialLink}">
+              <f:if condition="{item.socialLink.url}">
                 <f:link.typolink parameter="{item.socialLink}" additionalAttributes="{style:'background-color:{item.SocialBgColor};'}">
                   <i class="{item.socialIcon}"></i>
                 </f:link.typolink>
               </f:if>
             </li>
-          </f:if>
+          </f:if>  
         </f:for>
       </ul>
     </f:if>
   </div>
-  
-
 </html>

@@ -9,8 +9,9 @@
 							<f:format.raw>{data.text}</f:format.raw>
 						</f:if>
 						<div class="badges">
-							<f:if condition="{data.file2.0}">
-								<f:for each="{data.file2}" as="item" iteration="i">
+							<f:if condition="{data.image.0}">
+							
+								<f:for each="{data.image}" as="item" iteration="i">
 									<f:if condition="{item.properties.link}">
 										<f:then>
 											<f:link.typolink parameter="{item.properties.link}" class="badge-link">
