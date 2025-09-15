@@ -14,12 +14,15 @@
       <div class="container">
         <div id="c18" class="frame frame-default frame-type-text frame-layout-0">
           <f:if condition="{data.headline}">
-            <h2 class="large-font">{data.headline}</h2>
+            <h2 class="mb-3">{data.headline}</h2>
+          </f:if>
+          <f:if condition="{data.subHeadline}">
+            <h3 class="my-0 mb-3">{data.subHeadline}</h2>
           </f:if>
           <f:if condition="{data.btntxt} && {data.btnlink}">
-            <f:link.typolink class="btn btn-outline btn-xl js-scroll-trigger" parameter="{data.btnlink}">
+            <span class="btn btn-outline btn-xl js-scroll-trigger">
               {data.btntxt}
-            </f:link.typolink>
+            </span>
           </f:if>
         </div>
       </div>

@@ -16,7 +16,7 @@
           <f:if condition="{data.image}">
             <f:for each="{data.image}" as="item" iteration="i">
               <div class="feature-image">
-                <f:image width="323c" height="650c" image="{item}" />
+                <img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" width="323c" height="650c" />
               </div>
             </f:for>
           </f:if>

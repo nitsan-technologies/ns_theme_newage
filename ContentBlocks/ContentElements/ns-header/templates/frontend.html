@@ -16,9 +16,9 @@
               <div class="header-content mx-auto">
                 <f:if condition="{data.text}">
                   <h1 class="mb-5">{data.text}</h1>
-                </f:if>
-                <f:if condition="{data.btnText} && {data.link}">
-                  <f:link.typolink parameter="{data.link}" class="btn btn-outline btn-xl js-scroll-trigger">{data.btnText}
+                </f:if>                
+                <f:if condition="{data.btn_text} && {data.link.url} !=''">
+                  <f:link.typolink parameter="{data.link.url}" class="btn btn-outline btn-xl js-scroll-trigger">{data.btn_text}
                   </f:link.typolink>
                 </f:if>
               </div>

@@ -401,7 +401,7 @@ class ContentBlockMigration
         $data = [
             'CType' => $cType,
             'text' => $parsed['text'] ?? '',
-            'btnText' => $parsed['btnText'] ?? '',
+            'btn_text' => $parsed['btnText'] ?? '',
             'link' => $parsed['link'] ?? '',
         ];
         $this->updateTtContent($data, $uid, $pid);

@@ -35,7 +35,7 @@ fields:
       - gif
     maxitems: 1
   -
-    identifier: btnText
+    identifier: btn_text
     label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.btnText'
     type: Text
   -

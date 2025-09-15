@@ -13,8 +13,8 @@
 							<f:if condition="{data.text}">
 								<h1 class="mb-5">{data.text}</h1>
 							</f:if>
-							<f:if condition="{data.btnText} && {data.link}">
-								<button class="btn">{data.btnText}</button>
+							<f:if condition="{data.btn_text} && {data.link.url} != ''">
+								<span class="btn">{data.btn_text}</span>
 							</f:if>
 						</div>
 					</div>

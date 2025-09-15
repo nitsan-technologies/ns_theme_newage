@@ -6,12 +6,14 @@
 			<div class="row">
 				<div class="col-md-12 mx-auto">
 					<div class="download-content text-center">
-						<f:format.raw>{data.text}</f:format.raw>
+						<f:format.crop maxCharacters="100" append="...">
+							<f:format.raw>{data.text}</f:format.raw>
+						</f:format.crop>
 					</div>
 					<div class="download-image">
 						<f:if condition="{data.image.0}">
 							<f:for each="{data.image}" as="item" iteration="i">
-								<f:image height="60c" width="203c" image="{item}" />
+								<img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" height="60c" width="203c" />
 							</f:for>
 						</f:if>
 					</div>

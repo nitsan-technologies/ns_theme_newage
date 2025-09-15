@@ -401,3 +401,19 @@ section.pageBanner ,
   justify-content: center;
   margin: 0;
 }
+
+
+.cta .large-font {
+  color: inherit;
+}
+
+.cta .btn {
+  background-color: #fdcc52 !important;
+  border-color: #fdcc52 !important;  
+  transition: all 0.3s ease-in-out;
+}
+
+.cta .btn:hover {
+  background-color: transparent !important;
+  border-color: inherit !important;  
+}

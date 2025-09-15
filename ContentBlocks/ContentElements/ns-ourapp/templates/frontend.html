@@ -14,12 +14,12 @@
 								<f:for each="{data.image}" as="item" iteration="i">
 									<f:if condition="{item.properties.link}">
 										<f:then>
-											<f:link.typolink parameter="{item.properties.link}" class="badge-link">
-												<f:image height="60c" width="203c" image="{item}" />
+											<f:link.typolink parameter="{item.properties.link}" class="badge-link">												
+												<img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" height="60c" width="203c" />
 											</f:link.typolink>
 										</f:then>
 										<f:else>
-											<f:image height="60c" width="203c" image="{item}" />
+											<img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" height="60c" width="203c" />
 										</f:else>
 									</f:if>
 								</f:for>
