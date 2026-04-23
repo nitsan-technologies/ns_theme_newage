@@ -1,10 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
+<f:layout name="Preview"/>
+<f:section name="Content">
 	<div class="ns-backend-preview">
 		<h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_header" /></b></h2>
-		<f:variable name="bg-image">
-			{f:uri.image(image:'{data.file2.0}' , absolute=1)} 
-		</f:variable>
+
+		<f:variable name="bg-image" value="" />
+		<f:if condition="{data.file2.0}">
+			<f:variable name="bg-image" value="{f:uri.image(image: data.file2.0, absolute: 1)}" />
+		</f:if>
+
 		<div class="container h-100" style="{f:if(condition: data.file2.0, then:'background-image:url({bg-image})')}">
 			<div class="header-teaser">
 				<div class="row">
@@ -29,5 +33,5 @@
 			</div>
 		</div>
 	</div>
-
+</f:section>
 </html>

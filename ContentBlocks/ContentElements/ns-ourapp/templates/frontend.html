@@ -12,6 +12,7 @@
 							<f:if condition="{data.image.0}">
 							
 								<f:for each="{data.image}" as="item" iteration="i">
+									<f:debug>{item}</f:debug>
 									<f:if condition="{item.properties.link}">
 										<f:then>
 											<f:link.typolink parameter="{item.properties.link}" class="badge-link">												
