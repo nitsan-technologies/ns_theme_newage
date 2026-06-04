@@ -6,4 +6,3 @@ services:
 
   NITSAN\NsThemeNewage\:
     resource: '../Classes/*'
-

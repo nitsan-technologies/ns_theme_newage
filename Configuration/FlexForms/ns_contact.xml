@@ -88,6 +88,30 @@
                                                 <type>input</type>
                                                 <renderType>colorpicker</renderType>
                                                 <size>10</size>
+                                                <valuePicker type="array">
+                                                    <items type="array">
+                                                        <numIndex index="0" type="array">
+                                                            <numIndex index="0">Red</numIndex>
+                                                            <numIndex index="1">#FF0000</numIndex>
+                                                        </numIndex>
+                                                        <numIndex index="1" type="array">
+                                                            <numIndex index="0">Green</numIndex>
+                                                            <numIndex index="1">#008000</numIndex>
+                                                        </numIndex>
+                                                        <numIndex index="2" type="array">
+                                                            <numIndex index="0">Blue</numIndex>
+                                                            <numIndex index="1">#0000FF</numIndex>
+                                                        </numIndex>
+                                                        <numIndex index="3" type="array">
+                                                            <numIndex index="0">White</numIndex>
+                                                            <numIndex index="1">#FFFFFF</numIndex>
+                                                        </numIndex>
+                                                        <numIndex index="4" type="array">
+                                                            <numIndex index="0">Black</numIndex>
+                                                            <numIndex index="1">#000000</numIndex>
+                                                        </numIndex>
+                                                    </items>
+                                                </valuePicker>
                                             </config>
                                        
                                     </SocialBgColor>
