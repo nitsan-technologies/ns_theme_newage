@@ -215,3 +215,49 @@
   margin: 10px;
   margin-bottom: 30px;
 }
+
+/* Social Links Background Color: inline TYPO3 color picker (no fixed overlay) */
+.panel-collapse,
+.panel .panel-collapse,
+.panel-group,
+.form-section,
+.form-wizards-wrap,
+.formengine-field-item,
+.t3js-formengine-field-item,
+typo3-formengine-element-color {
+  overflow: visible;
+}
+
+typo3-formengine-element-color typo3-backend-color-picker,
+typo3-backend-color-picker {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+typo3-formengine-element-color .alwan__popover-container,
+typo3-backend-color-picker .alwan__popover-container {
+  display: block !important;
+  height: auto !important;
+  width: auto !important;
+  max-width: 260px;
+  transform: none !important;
+  overflow: visible;
+}
+
+typo3-formengine-element-color .alwan__popover-container > .alwan,
+typo3-backend-color-picker .alwan__popover-container > .alwan,
+typo3-formengine-element-color typo3-backend-color-picker > .alwan,
+typo3-backend-color-picker > .alwan {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  z-index: 1 !important;
+  margin-top: 8px;
+}
+
+typo3-formengine-element-color:has(.alwan--open),
+.formengine-field-item:has(.alwan--open) {
+  margin-bottom: 300px;
+}

@@ -1,0 +1,34 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+	<div class="download-section {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="text-center">
+						<f:if condition="{data.text}">
+							<f:format.raw>{data.text}</f:format.raw>
+						</f:if>
+						<div class="badges">
+							<f:if condition="{data.image.0}">
+							
+								<f:for each="{data.image}" as="item" iteration="i">
+									<f:if condition="{item.properties.link}">
+										<f:then>
+											<f:link.typolink parameter="{item.properties.link}" class="badge-link">												
+												<img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" height="60c" width="203c" />
+											</f:link.typolink>
+										</f:then>
+										<f:else>
+											<img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" height="60c" width="203c" />
+										</f:else>
+									</f:if>
+								</f:for>
+							</f:if>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</html>

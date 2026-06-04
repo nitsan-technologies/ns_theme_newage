@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <div class="ns-backend-preview">
+    <h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_contact" /></b></h2>
+    <f:if condition="{data.beforeText} && {data.afterText}">
+      <h1 class="text-center">{data.beforeText}
+        <i class="fa {data.iconInText}"></i>
+          {data.afterText}
+      </h1>
+    </f:if>
+
+    <ul class="list-inline list-social text-center">
+      <f:for each="{data.contact}" as="item" iteration="i">
+
+        <li class="list-inline-item social">
+          <f:if condition="{item.socialIcon}">
+            <i class="fa {item.socialIcon}"></i>
+          </f:if>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+  
+
+</html>

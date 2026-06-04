@@ -1,0 +1,67 @@
+name: nitsan/ns-contact
+typeName: nitsan_nscontact
+group: newage_content_blocks
+prefixFields: false
+prefixType: vendor
+fields:
+  -
+    identifier: beforeText
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.beforeText'
+    type: Text
+    required: true
+  -
+    identifier: iconInText
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.icon'
+    type: Select
+    itemsProcFunc: 'NITSAN\NsThemeNewage\Backend\ItemsProcFunc->getFaIconsList'
+    renderType: selectSingle
+    maxitems: 1
+  -
+    identifier: afterText
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.afterText'
+    type: Text
+    required: true
+  -
+    identifier: contact
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialLinks'
+    type: Collection
+    appearance:
+      collapseAll: true
+      expandSingle: true
+      levelLinksPosition: top
+    fields:
+      -
+        identifier: socialIcon
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex:general.icon'
+        type: Select
+        itemsProcFunc: 'NITSAN\NsThemeNewage\Backend\ItemsProcFunc->getFabIconsList'
+        renderType: selectSingle
+        maxitems: 1
+      -
+        identifier: socialLink
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link'
+        type: Link
+      -
+        identifier: SocialBgColor
+        label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialBgColor'
+        type: Color
+        default: '#000000'
+        valuePicker:
+          items:
+            - ['Red', '#FF0000']
+            - ['Green', '#008000']
+            - ['Blue', '#0000FF']
+            - ['White', '#FFFFFF']
+            - ['Black', '#000000']
+  -
+    identifier: appearance_tab
+    type: Tab
+    label: Appearance
+  -
+    identifier: space_before_class
+    type: Text
+    useExistingField: true
+  -
+    identifier: space_after_class
+    type: Text
+    useExistingField: true

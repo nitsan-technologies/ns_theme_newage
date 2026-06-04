@@ -1,0 +1,36 @@
+name: nitsan/ns-cta
+typeName: nitsan_nscta
+group: newage_content_blocks
+prefixFields: false
+prefixType: vendor
+fields:
+  -
+    identifier: headline
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.headline'
+    type: Text
+    required: true
+  -
+    identifier: subHeadline
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.subheadline'
+    type: Text
+    required: true
+  -
+    identifier: btntxt
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.btnText'
+    type: Text
+  -
+    identifier: btnlink
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link'
+    type: Link
+  -
+    identifier: appearance_tab
+    type: Tab
+    label: Appearance
+  -
+    identifier: space_before_class
+    type: Text
+    useExistingField: true
+  -
+    identifier: space_after_class
+    type: Text
+    useExistingField: true

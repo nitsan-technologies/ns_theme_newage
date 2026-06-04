@@ -1,0 +1,56 @@
+name: nitsan/ns-header
+typeName: nitsan_nsheader
+group: newage_content_blocks
+prefixFields: false
+prefixType: vendor
+fields:
+  -
+    identifier: text
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.text'
+    type: Textarea
+    rows: null
+    enableRichtext: false
+    required: true
+  -
+    identifier: file2
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.bgimage'
+    type: File
+    allowed:
+      - jpg
+      - png
+      - svg
+      - jpeg
+      - gif
+    minitems: 1
+    maxitems: 1
+  -
+    identifier: image
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.image'
+    type: File
+    allowed:
+      - jpg
+      - png
+      - svg
+      - jpeg
+      - gif
+    maxitems: 1
+  -
+    identifier: btn_text
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.btnText'
+    type: Text
+  -
+    identifier: link
+    label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.link'
+    type: Link
+  -
+    identifier: appearance_tab
+    type: Tab
+    label: Appearance
+  -
+    identifier: space_before_class
+    type: Text
+    useExistingField: true
+  -
+    identifier: space_after_class
+    type: Text
+    useExistingField: true

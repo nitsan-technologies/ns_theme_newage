@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <div class="ns-backend-preview">
+    <h2><b><f:translate key="LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_db.xlf:wizard.ns_cta" /></b></h2>
+    <f:if condition="{image}">
+      <f:then>
+        <f:for each="{image}" as="img">
+          <f:variable name="bgmedia" value="{f:uri.image(image:'{img}')}" />
+        </f:for>
+      </f:then>
+    </f:if>
+
+    <section class="cta-backend" style="{f:if(condition: image, then:'background-image:url({bgmedia})')}">
+      <div class="container">
+        <div id="c18" class="frame frame-default frame-type-text frame-layout-0">
+          <f:if condition="{data.headline}">
+            <h2 class="mb-3">{data.headline}</h2>
+          </f:if>
+          <f:if condition="{data.subHeadline}">
+            <h3 class="my-0 mb-3">{data.subHeadline}</h2>
+          </f:if>
+          <f:if condition="{data.btntxt} && {data.btnlink}">
+            <span class="btn btn-outline btn-xl js-scroll-trigger">
+              {data.btntxt}
+            </span>
+          </f:if>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+  </div>
+
+</html>

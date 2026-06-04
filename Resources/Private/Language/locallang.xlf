@@ -6,6 +6,9 @@
 			<trans-unit id="palette.access">
                 <source>Access</source>
             </trans-unit>
+            <trans-unit id="contentBlocks.groupName">
+                <source>Content Blocks</source>
+            </trans-unit>
             <trans-unit id="title">
                 <source>Title</source>
             </trans-unit>

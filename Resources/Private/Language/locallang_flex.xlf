@@ -34,10 +34,10 @@
                 <source>Description</source>
             </trans-unit>
             <trans-unit id="general.beforeText">
-                <source>Before icon text</source>
+                <source>beforeText</source>
             </trans-unit>
             <trans-unit id="general.afterText">
-                <source>After icon text</source>
+                <source>afterText</source>
             </trans-unit>
             <trans-unit id="general.item">
                 <source>Item</source>

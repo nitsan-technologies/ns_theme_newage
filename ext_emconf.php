@@ -9,10 +9,11 @@ $EM_CONF['ns_theme_newage'] = [
 	'author_email' => 'info@t3planet.de',
 	'author_company' => 'T3Planet',
 	'state' => 'stable',
-	'version' => '13.0.1',
+	'version' => '13.1.0',
 	'constraints' => [
 		'depends' => [
 			'typo3' => '13.0.0-13.4.99',
+			'content_blocks' => '1.0.0-1.99.99',
 			'ns_basetheme' => '12.0.0-13.4.99',
 		],
 		'conflicts' => [
