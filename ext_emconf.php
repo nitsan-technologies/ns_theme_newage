@@ -14,6 +14,7 @@ $EM_CONF['ns_theme_newage'] = [
 		'depends' => [
 			'typo3' => '13.0.0-14.9.99',
 			'ns_basetheme' => '12.0.0-13.4.99',
+			'content_blocks' => '2.0.0-2.9.99',
 		],
 		'conflicts' => [
 		],
