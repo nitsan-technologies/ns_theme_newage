@@ -1,6 +1,34 @@
 <!-- Footer -->
 <footer>
     <div class="container">
+        <f:variable name="twitterLink" value="{f:cObject(typoscriptObjectPath: 'lib.socialTwitterLink')}" />
+        <f:variable name="facebookLink" value="{f:cObject(typoscriptObjectPath: 'lib.socialFacebookLink')}" />
+        <f:variable name="linkedinLink" value="{f:cObject(typoscriptObjectPath: 'lib.socialLinkedinLink')}" />
+        <f:if condition="{twitterLink} || {facebookLink} || {linkedinLink}">
+            <ul class="list-inline list-social footer-social">
+                <f:if condition="{twitterLink} && {twitterLink} != '/'">
+                    <li class="list-inline-item social-twitter">
+                        <a href="{twitterLink}" target="_blank" rel="noreferrer" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </f:if>
+                <f:if condition="{facebookLink} && {facebookLink} != '/'">
+                    <li class="list-inline-item social-facebook-f">
+                        <a href="{facebookLink}" target="_blank" rel="noreferrer" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </f:if>
+                <f:if condition="{linkedinLink} && {linkedinLink} != '/'">
+                    <li class="list-inline-item social-linkedin">
+                        <a href="{linkedinLink}" target="_blank" rel="noreferrer" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </f:if>
+            </ul>
+        </f:if>
         <p><f:cObject typoscriptObjectPath="lib.copyright" /></p>
         <f:render section="FooterMenu" arguments="{FooterMenu: FooterMenu}" />
     </div>

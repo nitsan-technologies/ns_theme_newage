@@ -1,34 +1,30 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <f:if condition="{settings.logo}">
+        <f:variable name="logo" value="{f:cObject(typoscriptObjectPath: 'lib.siteLogo')}" />
+        <f:variable name="logoWidth" value="{f:cObject(typoscriptObjectPath: 'lib.siteLogoWidth')}" />
+        <f:variable name="logoHeight" value="{f:cObject(typoscriptObjectPath: 'lib.siteLogoHeight')}" />
+        <f:variable name="logoText" value="{f:cObject(typoscriptObjectPath: 'lib.siteLogoText')}" />
+        <f:if condition="{logo}">
             <f:then>
                 <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.rootPageId')}"
                     class="navbar-brand js-scroll-trigger">
-                    <f:if condition="{settings.childSettings.logo_width}">
+                    <f:if condition="{logoWidth} || {logoHeight}">
                         <f:then>
-                            <f:variable name="imgWidth" value="width={settings.childSettings.logo_width}" />
+                            <f:image src="{logo}" alt="{f:if(condition: logoText, then: logoText, else: 'Logo')}"
+                                width="{logoWidth}c" height="{logoHeight}c" />
                         </f:then>
                         <f:else>
-                            <f:variable name="imgWidth" value="width=120px" />
+                            <f:image src="{logo}" alt="{f:if(condition: logoText, then: logoText, else: 'Logo')}" />
                         </f:else>
                     </f:if>
-                    <f:if condition="{settings.childSettings.logo_height}">
-                        <f:then>
-                            <f:variable name="imgHeight" value="height={settings.childSettings.logo_height}" />
-                        </f:then>
-                        <f:else>
-                            <f:variable name="imgHeight" value="height=50px" />
-                        </f:else>
-                    </f:if>
-                    <img src="{settings.childSettings.logo}" alt="logo" />
-                    <f:if condition="{settings.childSettings.logo_text}">{settings.childSettings.logo_text}</f:if>
+                    <f:if condition="{logoText}">{logoText}</f:if>
                 </f:link.page>
             </f:then>
             <f:else>
-                <f:if condition="{settings.childSettings.logo_text}">
+                <f:if condition="{logoText}">
                     <f:link.typolink parameter="#page-top" class="navbar-brand js-scroll-trigger">
-                        {settings.childSettings.logo_text}
+                        {logoText}
                     </f:link.typolink>
                 </f:if>
             </f:else>
@@ -44,10 +40,11 @@
 </nav>
 <f:section name="MainMenu">
     <f:if condition="{MainMenu}">
+        <f:variable name="rootPageUrl" value="{f:uri.page(pageUid: '{f:cObject(typoscriptObjectPath: \'lib.rootPageId\')}')}" />
         <ul class="navbar-nav ml-auto">
             <f:for each="{MainMenu}" as="item">
                 <li class="nav-item">
-                    <a href="./#<f:format.case mode='lower'>{item.title}</f:format.case>" title="{item.title}" class="nav-link js-scroll-trigger">
+                    <a href="{rootPageUrl}#<f:format.case mode='lower'>{item.title}</f:format.case>" title="{item.title}" class="nav-link js-scroll-trigger">
                         {item.title}
                     </a>
                 </li>

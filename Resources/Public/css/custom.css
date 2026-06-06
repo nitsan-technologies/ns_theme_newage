@@ -6,6 +6,12 @@
 
 .pageBanner {
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.site-main {
+  padding-top: 72px;
 }
 
 .btn-primary {
@@ -416,4 +422,24 @@ section.pageBanner ,
 .cta .btn:hover {
   background-color: transparent !important;
   border-color: inherit !important;  
+}
+
+footer .footer-social {
+  margin-bottom: 15px;
+}
+
+footer .footer-social li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+}
+
+footer .footer-social li a:hover {
+  background-color: #fdcc52;
+  color: #fff;
 }
