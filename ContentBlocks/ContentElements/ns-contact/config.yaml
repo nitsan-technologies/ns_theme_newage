@@ -25,6 +25,10 @@ fields:
     identifier: contact
     label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialLinks'
     type: Collection
+    appearance:
+      collapseAll: true
+      expandSingle: true
+      levelLinksPosition: top
     fields:
       -
         identifier: socialIcon
@@ -41,6 +45,14 @@ fields:
         identifier: SocialBgColor
         label: 'LLL:EXT:ns_theme_newage/Resources/Private/Language/locallang_flex.xlf:general.SocialBgColor'
         type: Color
+        default: '#000000'
+        valuePicker:
+          items:
+            - ['Red', '#FF0000']
+            - ['Green', '#008000']
+            - ['Blue', '#0000FF']
+            - ['White', '#FFFFFF']
+            - ['Black', '#000000']
   -
     identifier: appearance_tab
     type: Tab

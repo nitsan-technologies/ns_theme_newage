@@ -3,8 +3,8 @@
   <f:if condition="{data.file2.0}">
 
     <f:then>
-      <header id="home" class="masthead"
-        style="background-image: url('{f:uri.image(image: '{data.file2.0}', treatIdAsReference: 1)}'); ">
+      <header id="home" class="masthead with-bg"
+        style="background-image: url('{f:uri.image(image: '{data.file2.0}', treatIdAsReference: 1, crop: false)}');">
     </f:then>
     <f:else>
       <header class="masthead">
@@ -27,7 +27,7 @@
               <div class="col-lg-5">
                 <div class="device-container">
                   <div class="device-mockup">
-                    <f:image image="{data.image.0}" height="650c" width="323c" />
+                    <f:image image="{data.image.0}" height="650c" width="323c" crop="false" />
                   </div>
                 </div>
               </div>
