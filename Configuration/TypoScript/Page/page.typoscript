@@ -32,6 +32,7 @@ page {
     90 = EXT:ns_theme_newage/Resources/Public/vendor/simple-line-icons/css/simple-line-icons.css
     140 = EXT:ns_theme_newage/Resources/Public/css/new-age.css
     150 = EXT:ns_theme_newage/Resources/Public/css/custom.css
+    9901 = EXT:ns_basetheme/Resources/Public/css/ns_basetheme.css
   }
 
   // Initiate all the js-together
@@ -40,6 +41,15 @@ page {
     20 = EXT:ns_theme_newage/Resources/Public/vendor/bootstrap/js/bootstrap.bundle.min.js
     30 = EXT:ns_theme_newage/Resources/Public/vendor/jquery-easing/jquery.easing.min.js
     40 = EXT:ns_theme_newage/Resources/Public/js/new-age.js
+    9901 = EXT:ns_basetheme/Resources/Public/js/ns_basetheme.js
+  }
+
+  footerData {
+    9901 = TEXT
+    9901 {
+      value = <a href="#" id="ns_basetheme_back_to_top" title="Back to top">&uarr;</a>
+      stdWrap.if.isTrue.data = siteSettings:ns_basetheme.website.settings.back_to_top
+    }
   }
 
   # <body> class based on backend_layout
@@ -86,13 +96,70 @@ page {
       pagets__content = TEXT
       pagets__content.value = {$ns_theme_newage.website.paths.templateRootPath}Content.html
     }
-    settings < plugin.ns_basetheme.settings
-    settings.childSettings < plugin.ns_theme_newage.settings
+    settings < plugin.ns_theme_newage.settings
+
+    dataProcessing {
+      101 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      101 {
+        levels = 5
+        special = directory
+        special.value = {$ns_basetheme.website.settings.main_menu}
+        expandAll = 1
+        includeSpacer = 1
+        as = MainMenu
+      }
+
+      102 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      102 {
+        levels = 5
+        special = directory
+        special.value = {$ns_basetheme.website.settings.footer_menu}
+        expandAll = 1
+        includeSpacer = 1
+        as = FooterMenu
+      }
+    }
   }
 }
 
 # Get default content
 lib {
+
+  siteLogo = TEXT
+  siteLogo {
+    data = siteSettings:ns_basetheme.website.settings.logo
+    stdWrap.trim = 1
+  }
+
+  siteLogoWidth = TEXT
+  siteLogoWidth.data = siteSettings:ns_basetheme.website.settings.logo_width
+
+  siteLogoHeight = TEXT
+  siteLogoHeight.data = siteSettings:ns_basetheme.website.settings.logo_height
+
+  siteLogoText = TEXT
+  siteLogoText.data = siteSettings:ns_basetheme.website.settings.logo_text
+
+  pageBannerImage = TEXT
+  pageBannerImage.value = /fileadmin/ns_theme_newage/age-banner.png
+
+  socialTwitterLink = TEXT
+  socialTwitterLink {
+    data = siteSettings:ns_basetheme.website.settings.seo_twitter_link
+    stdWrap.trim = 1
+  }
+
+  socialFacebookLink = TEXT
+  socialFacebookLink {
+    data = siteSettings:ns_basetheme.website.settings.seo_facebook_link
+    stdWrap.trim = 1
+  }
+
+  socialLinkedinLink = TEXT
+  socialLinkedinLink {
+    data = siteSettings:ns_basetheme.website.settings.seo_linkedin_link
+    stdWrap.trim = 1
+  }
 
   copyright >
   copyright = COA
@@ -108,7 +175,7 @@ lib {
 
     2 = TEXT
     2 {
-      value = {$ns_basetheme.website.settings.copyright}
+      data = siteSettings:copyright
       wrap = |
     }
   }

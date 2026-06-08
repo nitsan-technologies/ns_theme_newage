@@ -1,4 +1,8 @@
 base: /
+dependencies:
+  - nitsan/ns-theme-newage
+  - nitsan/ns-basetheme
+errorHandling:
 disableStaticFileCache: false
 errorHandling:
   -

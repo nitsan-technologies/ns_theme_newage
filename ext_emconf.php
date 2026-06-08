@@ -9,19 +9,21 @@ $EM_CONF['ns_theme_newage'] = [
 	'author_email' => 'info@t3planet.de',
 	'author_company' => 'T3Planet',
 	'state' => 'stable',
-	'version' => '13.1.0',
+	'version' => '14.0.0',
 	'constraints' => [
 		'depends' => [
-			'typo3' => '13.0.0-13.4.99',
-			'content_blocks' => '1.0.0-1.99.99',
-			'ns_basetheme' => '12.0.0-13.4.99',
+			'typo3' => '14.0.0-14.9.99',
+			'ns_basetheme' => '14.0.0-14.9.99',
+			'content_blocks' => '2.0.0-2.9.99',
 		],
 		'conflicts' => [
 		],
 		'suggests' => [
 		],
 	],
-	'autoload' => array(
-		'classmap' => array('Classes/'),
-	),
+	'autoload' => [
+		'psr-4' => [
+			'NITSAN\\NsThemeNewage\\' => 'Classes/',
+		],
+	],
 ];

@@ -2,7 +2,7 @@
 
 <f:section name="main">
 	<div class="site-main">
-		<section class="pageBanner" style="background-image: url('fileadmin/ns_theme_newage/age-banner.png');">
+		<section class="pageBanner" style="background-image: url('{f:cObject(typoscriptObjectPath: 'lib.pageBannerImage')}');">
 	        <div class="container">
 	            <div class="pattern-with-text pattern--small-right">
 	            	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}">
