@@ -45,6 +45,21 @@ page {
   }
 
   footerData {
+    # Loaded at end of body so it wins over Visual Editor editable.css
+    9900 = TEXT
+    9900 {
+      value (
+<style>
+header.masthead .header-content h1,
+header.masthead .header-content h1.mb-5,
+header.masthead .header-content h1 ve-editable-text {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+</style>
+)
+    }
+
     9901 = TEXT
     9901 {
       value = <a href="#" id="ns_basetheme_back_to_top" title="Back to top">&uarr;</a>
@@ -99,6 +114,9 @@ page {
     settings < plugin.ns_theme_newage.settings
 
     dataProcessing {
+      # Required for f:render.text on page fields (e.g. page banner title)
+      5 = record-transformation
+
       101 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       101 {
         levels = 5

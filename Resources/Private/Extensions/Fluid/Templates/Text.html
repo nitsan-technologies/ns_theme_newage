@@ -6,11 +6,11 @@
 		<f:if condition="{data.layout} == 1">
 			<f:then>
 				<div class="section-heading text-center">
-					<f:format.html>{data.bodytext}</f:format.html>
+					{record -> f:render.text(field: 'bodytext')}
 				</div>
 			</f:then>
 			<f:else>
-				<f:format.html>{data.bodytext}</f:format.html>
+				{record -> f:render.text(field: 'bodytext')}
 			</f:else>
 		</f:if>
 	</div>

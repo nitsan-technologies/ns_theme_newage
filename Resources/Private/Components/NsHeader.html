@@ -2,11 +2,11 @@
 
   <f:if condition="{file2.0}">
     <f:then>
-      <header id="home" class="masthead with-bg"
+      <header id="home" class="masthead with-bg{f:editMode(then: ' masthead-edit-mode')}"
         style="background-image: url('{f:uri.image(image: '{file2.0}', treatIdAsReference: 1)}');">
     </f:then>
     <f:else>
-      <header class="masthead">
+      <header class="masthead{f:editMode(then: ' masthead-edit-mode')}">
     </f:else>
   </f:if>
         <div class="container h-100 {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">

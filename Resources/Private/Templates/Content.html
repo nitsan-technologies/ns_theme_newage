@@ -5,8 +5,9 @@
 		<section class="pageBanner" style="background-image: url('{f:cObject(typoscriptObjectPath: 'lib.pageBannerImage')}');">
 	        <div class="container">
 	            <div class="pattern-with-text pattern--small-right">
-	            	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}">
-	                	<h2>{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}</h2>
+	            	<f:variable name="pageTitle" value="{record -> f:render.text(field: 'title')}" />
+	            	<f:if condition="{pageTitle}">
+	                	<h2>{pageTitle}</h2>
 	                </f:if>	
 	            </div>
 	        </div>
@@ -15,7 +16,9 @@
 			<f:case value="1">
 				<section>
 				    <div class="container">
-						<f:cObject typoscriptObjectPath="lib.content"/>
+						<f:mark.contentArea colPos="0">
+							<f:cObject typoscriptObjectPath="lib.content"/>
+						</f:mark.contentArea>
 					</div>
 				</section>	
 			</f:case>
@@ -23,19 +26,25 @@
 				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')}">
 					<f:then>
 						<section id="cta" style="background-image: url({f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')});">
-					    	<f:cObject typoscriptObjectPath="lib.content"/>
+					    	<f:mark.contentArea colPos="0">
+					    		<f:cObject typoscriptObjectPath="lib.content"/>
+					    	</f:mark.contentArea>
 					    </section>
 					</f:then>
 					<f:else>
 						<section>
-					    	<f:cObject typoscriptObjectPath="lib.content"/>
+					    	<f:mark.contentArea colPos="0">
+					    		<f:cObject typoscriptObjectPath="lib.content"/>
+					    	</f:mark.contentArea>
 					    </section>
 					</f:else>
 				</f:if>	
 			</f:case>
 			<f:defaultCase>
 				<section>
-					<f:cObject typoscriptObjectPath="lib.content"/>
+					<f:mark.contentArea colPos="0">
+						<f:cObject typoscriptObjectPath="lib.content"/>
+					</f:mark.contentArea>
 				</section>	
 			</f:defaultCase>
 		</f:switch>

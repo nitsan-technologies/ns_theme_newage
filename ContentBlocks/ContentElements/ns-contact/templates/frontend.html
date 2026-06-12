@@ -1,9 +1,11 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
   <div class="contact {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
-    <f:if condition="{data.beforeText} && {data.afterText}">
-      <h2>{data.beforeText}
+    <f:variable name="contactBeforeText" value="{data -> f:render.text(field: 'beforeText')}" />
+    <f:variable name="contactAfterText" value="{data -> f:render.text(field: 'afterText')}" />
+    <f:if condition="{contactBeforeText} && {contactAfterText}">
+      <h2>{contactBeforeText}
         <i class="fa {data.iconInText}"></i>
-        {data.afterText}
+        {contactAfterText}
       </h2>
     </f:if>
     <f:if condition="{data.contact}">
@@ -17,7 +19,7 @@
                 </f:link.typolink>
               </f:if>
             </li>
-          </f:if>  
+          </f:if>
         </f:for>
       </ul>
     </f:if>

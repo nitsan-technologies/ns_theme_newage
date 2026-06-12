@@ -1,5 +1,6 @@
-# Include the BackendLayouts
-@import "EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts"
+# Include the BackendLayouts (required for Visual Editor f:mark.contentArea)
+@import "EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts/Default.typoscript"
+@import "EXT:ns_theme_newage/Configuration/PageTSconfig/BackendLayouts/Content.typoscript"
 
 # Remove default custom elements from EXT:ns_basetheme
 TCEFORM {
