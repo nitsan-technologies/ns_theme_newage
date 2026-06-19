@@ -6,17 +6,23 @@
 		<f:case value="1">
 		    <section>
 		    	<div class="container">
-		    		<f:cObject typoscriptObjectPath="lib.content"/>
+		    		<f:mark.contentArea colPos="0">
+		    			<f:cObject typoscriptObjectPath="lib.content"/>
+		    		</f:mark.contentArea>
 		    	</div>
 		    </section>
 		</f:case>
 		<f:case value="2">
 		    <section>
-		    	<f:cObject typoscriptObjectPath="lib.content"/>
+		    	<f:mark.contentArea colPos="0">
+		    		<f:cObject typoscriptObjectPath="lib.content"/>
+		    	</f:mark.contentArea>
 		    </section>
 		</f:case>
 		<f:defaultCase>
-		    <f:cObject typoscriptObjectPath="lib.content"/>
+		    <f:mark.contentArea colPos="0">
+		    	<f:cObject typoscriptObjectPath="lib.content"/>
+		    </f:mark.contentArea>
 		    <f:cObject typoscriptObjectPath="lib.onePageScrollContent"/>
 		</f:defaultCase>
 	</f:switch>

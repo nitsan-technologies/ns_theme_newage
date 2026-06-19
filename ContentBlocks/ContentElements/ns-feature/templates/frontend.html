@@ -3,12 +3,14 @@
   <div class="{f:if(condition: data.space_before_class, then: ' space_before_{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' space_after_{data.space_after_class}')}">
     <div class="container">
       <div class="headline-block text-center">
-        <f:if condition="{data.header}">
-          <h2>{data.header}</h2>
+        <f:variable name="featureHeader" value="{data -> f:render.text(field: 'header')}" />
+        <f:if condition="{featureHeader}">
+          <h2>{featureHeader}</h2>
         </f:if>
-        <f:if condition="{data.subheader}">
-          <p class="text-muted">{data.subheader}</p>
-        </f:if>   
+        <f:variable name="featureSubheader" value="{data -> f:render.text(field: 'subheader')}" />
+        <f:if condition="{featureSubheader}">
+          <p class="text-muted">{featureSubheader}</p>
+        </f:if>
         <hr>
       </div>
       <div class="row">
@@ -16,7 +18,7 @@
           <f:if condition="{data.image}">
             <f:for each="{data.image}" as="item" iteration="i">
               <div class="feature-image">
-                <img src="{item.publicUrl}" alt="{item.alternative}" title="{item.title}" width="323c" height="650c" />
+                <f:image image="{item}" width="323c" height="650c" />
               </div>
             </f:for>
           </f:if>
@@ -30,11 +32,13 @@
                     <f:if condition="{item.socialIcon}">
                       <i class="{item.socialIcon}"></i>
                     </f:if>
-                    <f:if condition="{item.title}">
-                      <h3>{item.title}</h3>
+                    <f:variable name="itemTitle" value="{item -> f:render.text(field: 'title')}" />
+                    <f:if condition="{itemTitle}">
+                      <h3>{itemTitle}</h3>
                     </f:if>
-                    <f:if condition="{item.text}">
-                      <p class="text-muted">{item.text}</p>
+                    <f:variable name="itemText" value="{item -> f:render.text(field: 'text')}" />
+                    <f:if condition="{itemText}">
+                      <p class="text-muted">{itemText}</p>
                     </f:if>
                   </div>
                 </div>

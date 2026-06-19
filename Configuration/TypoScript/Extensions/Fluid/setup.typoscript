@@ -8,4 +8,13 @@ lib.contentElement {
     layoutRootPaths {
         10 = EXT:ns_theme_newage/Resources/Private/Extensions/Fluid/Layouts/
     }
+    dataProcessing {
+        5 = record-transformation
+    }
+}
+
+lib.contentBlock {
+    dataProcessing {
+        5 = record-transformation
+    }
 }

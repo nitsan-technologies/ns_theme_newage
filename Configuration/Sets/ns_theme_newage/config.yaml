@@ -1,2 +1,5 @@
 name: nitsan/ns-theme-newage
 label: Newage Theme Sets
+dependencies:
+  - nitsan-ns-basetheme/ns_basetheme
+pagets: EXT:ns_theme_newage/Configuration/PageTSconfig/setup.typoscript

@@ -437,6 +437,7 @@ header.masthead .header-content {
 
 header.masthead .header-content h1 {
   font-size: 30px;
+  color: #fff;
 }
 
 header.masthead .device-container {
@@ -448,11 +449,24 @@ header.masthead .device-container {
 header.masthead .device-container .screen img {
   border-radius: 3px;
 }
-.masthead .device-container,.header-content{
+.masthead .device-container,
+.masthead .header-content {
   position: relative;
-  top:50%;
-  transform: translateY(-50%);
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .masthead .header-content {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Keep phone mockup below the fixed-top navbar */
+  .masthead .device-container {
+    top: auto;
+    transform: none;
+    padding-top: 3rem;
+  }
 }
 .with-bg{
     background-repeat: no-repeat;
@@ -472,7 +486,7 @@ section .frame-type-text{
   header.masthead {
     height: 100vh;
     min-height: 775px;
-    padding-top: 0;
+    padding-top: 4.5rem;
     padding-bottom: 0;
   }
   header.masthead .header-content {

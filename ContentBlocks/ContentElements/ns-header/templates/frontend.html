@@ -3,23 +3,29 @@
   <f:if condition="{data.file2.0}">
 
     <f:then>
-      <header id="home" class="masthead with-bg"
+      <header id="home" class="masthead with-bg{f:editMode(then: ' masthead-edit-mode')}"
         style="background-image: url('{f:uri.image(image: '{data.file2.0}', treatIdAsReference: 1, crop: false)}');">
     </f:then>
     <f:else>
-      <header class="masthead">
+      <header class="masthead{f:editMode(then: ' masthead-edit-mode')}">
     </f:else>
   </f:if>
         <div class="container h-100 {f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
           <div class="row h-100">
             <div class="col-lg-7">
               <div class="header-content mx-auto">
-                <f:if condition="{data.text}">
-                  <h1 class="mb-5">{data.text}</h1>
-                </f:if>                
-                <f:if condition="{data.btn_text} && {data.link.url} !=''">
-                  <f:link.typolink parameter="{data.link.url}" class="btn btn-outline btn-xl js-scroll-trigger">{data.btn_text}
-                  </f:link.typolink>
+                <f:variable name="heroText" value="{data -> f:render.text(field: 'text')}" />
+                <f:if condition="{heroText}">
+                  <h1 class="mb-5" style="color: #fff !important;">{heroText}</h1>
+                </f:if>
+                <f:variable name="btnText" value="{data -> f:render.text(field: 'btn_text')}" />
+                <f:if condition="{btnText}">
+                  <f:if condition="{data.link.url}">
+                    <f:link.typolink parameter="{data.link.url}" class="btn btn-outline btn-xl js-scroll-trigger">{btnText}</f:link.typolink>
+                  </f:if>
+                  <f:if condition="{data.link} && !{data.link.url}">
+                    <f:link.typolink parameter="{data.link}" class="btn btn-outline btn-xl js-scroll-trigger">{btnText}</f:link.typolink>
+                  </f:if>
                 </f:if>
               </div>
             </div>
@@ -37,4 +43,3 @@
   </header>
 
 </html>
-

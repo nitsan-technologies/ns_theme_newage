@@ -2,7 +2,78 @@
  Custom Styles
 ***************************************************************************/
 
+/* Visual Editor: avoid fixed navbar clipping in backend iframe */
+#mainNav.navbar-edit-mode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
 
+#mainNav.navbar-edit-mode .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+
+#mainNav.navbar-edit-mode .navbar-nav {
+  flex-direction: row;
+}
+
+/* Hero phone mockup must stay below the fixed-top navbar */
+.masthead .device-container {
+  top: auto !important;
+  transform: none !important;
+}
+
+/* Hero headline must stay white on the gradient background */
+header.masthead,
+header.masthead .header-content,
+header.masthead .header-content h1,
+header.masthead .header-content h1.mb-5 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Visual editor: color on host element inherits into shadow DOM */
+header.masthead .header-content h1 ve-editable-text,
+header.masthead ve-editable-text,
+header.masthead ve-editable-rich-text,
+header.masthead ve-editable-rich-text .ck-content {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+header.masthead ve-editable-text .slot:hover,
+header.masthead ve-editable-text .slot:focus,
+header.masthead ve-editable-text .slot.empty,
+header.masthead ve-editable-rich-text .ck-content:hover,
+header.masthead ve-editable-rich-text .ck-content:focus {
+  backdrop-filter: none !important;
+}
+
+/* Visual editor: class is on the masthead itself (no :has() / breakpoint dependency) */
+header.masthead.masthead-edit-mode {
+  padding-top: 6rem !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+header.masthead.masthead-edit-mode .container.h-100,
+header.masthead.masthead-edit-mode .row.h-100 {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+header.masthead.masthead-edit-mode .col-lg-5 {
+  padding-top: 2rem;
+}
+
+header.masthead.masthead-edit-mode .device-container {
+  margin-top: 1.5rem !important;
+  padding-top: 0 !important;
+}
 
 .pageBanner {
   background-repeat: no-repeat;
@@ -12,6 +83,34 @@
 
 .site-main {
   padding-top: 72px;
+}
+
+/* Inner pages: use dark nav links on white navbar (not hero overlay style) */
+@media (min-width: 992px) {
+  body.content #mainNav,
+  body.content #mainNav.navbar-edit-mode {
+    border-color: rgba(34, 34, 34, 0.1);
+    background-color: #fff;
+  }
+
+  body.content #mainNav .navbar-brand {
+    color: #222222;
+  }
+
+  body.content #mainNav .navbar-brand:hover,
+  body.content #mainNav .navbar-brand:focus {
+    color: #fdcc52;
+  }
+
+  body.content #mainNav .navbar-nav > li > a,
+  body.content #mainNav .navbar-nav > li > a:focus {
+    color: #222222;
+  }
+
+  body.content #mainNav .navbar-nav > li > a:hover,
+  body.content #mainNav .navbar-nav > li > a:focus:hover {
+    color: #fdcc52;
+  }
 }
 
 .btn-primary {
