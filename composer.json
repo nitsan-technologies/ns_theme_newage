@@ -45,6 +45,8 @@
     "psr-4": {
       "NITSAN\\NsThemeNewage\\": "Classes/"
     }
+  },
+  "suggest": {
+      "friendsoftypo3/visual-editor": "Enable WYSIWYG frontend editing for the T3 New Age theme"
   }
-    
 }
