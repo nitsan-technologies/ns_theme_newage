@@ -16,9 +16,7 @@
 			<f:case value="1">
 				<section>
 				    <div class="container">
-						<f:mark.contentArea colPos="0">
-							<f:cObject typoscriptObjectPath="lib.content"/>
-						</f:mark.contentArea>
+						<f:cObject typoscriptObjectPath="lib.content"/>
 					</div>
 				</section>	
 			</f:case>
@@ -26,25 +24,19 @@
 				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')}">
 					<f:then>
 						<section id="cta" style="background-image: url({f:cObject(typoscriptObjectPath: 'lib.bodyTagPage')});">
-					    	<f:mark.contentArea colPos="0">
-					    		<f:cObject typoscriptObjectPath="lib.content"/>
-					    	</f:mark.contentArea>
+					    	<f:cObject typoscriptObjectPath="lib.content"/>
 					    </section>
 					</f:then>
 					<f:else>
 						<section>
-					    	<f:mark.contentArea colPos="0">
-					    		<f:cObject typoscriptObjectPath="lib.content"/>
-					    	</f:mark.contentArea>
+					    	<f:cObject typoscriptObjectPath="lib.content"/>
 					    </section>
 					</f:else>
 				</f:if>	
 			</f:case>
 			<f:defaultCase>
 				<section>
-					<f:mark.contentArea colPos="0">
-						<f:cObject typoscriptObjectPath="lib.content"/>
-					</f:mark.contentArea>
+					<f:cObject typoscriptObjectPath="lib.content"/>
 				</section>	
 			</f:defaultCase>
 		</f:switch>
