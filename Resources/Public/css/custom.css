@@ -17,6 +17,10 @@
   flex-grow: 1;
 }
 
+.site-main {
+  padding-top: 0px;
+}
+
 #mainNav.navbar-edit-mode .navbar-nav {
   flex-direction: row;
 }
