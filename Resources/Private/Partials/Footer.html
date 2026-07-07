@@ -29,7 +29,14 @@
                 </f:if>
             </ul>
         </f:if>
-        <p><f:cObject typoscriptObjectPath="lib.copyright" /></p>
+        <p>
+            <f:cObject typoscriptObjectPath="lib.copyright.1" />
+            <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.rootPageId')} && {f:cObject(typoscriptObjectPath: 'lib.rootPageId')} != 0">
+                <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.rootPageId')}">
+                    <f:cObject typoscriptObjectPath="lib.copyright.2" />
+                </f:link.page>
+            </f:if>
+        </p>
         <f:render section="FooterMenu" arguments="{FooterMenu: FooterMenu}" />
     </div>
 </footer>

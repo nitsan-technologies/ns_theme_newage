@@ -513,18 +513,22 @@ section.pageBanner ,
 
 
 .cta .large-font {
-  color: inherit;
+  color: #fff;
 }
 
 .cta .btn {
-  background-color: #fdcc52 !important;
-  border-color: #fdcc52 !important;  
+  background-color: transparent !important;
+  border-color: #fff !important;
+  color: #fff !important;
   transition: all 0.3s ease-in-out;
 }
 
-.cta .btn:hover {
-  background-color: transparent !important;
-  border-color: inherit !important;  
+.cta .btn:hover,
+.cta .btn:focus,
+.cta .btn:active {
+  background-color: #fdcc52 !important;
+  border-color: #fdcc52 !important;
+  color: #212529 !important;
 }
 
 footer .footer-social {
