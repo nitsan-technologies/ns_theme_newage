@@ -4,9 +4,5 @@ services:
     autoconfigure: true
     public: false
 
-  NITSAN\NsThemeNewage\Updates\ContentBlockMigration:
-    tags:
-      - name: 'install.upgrade.wizard'
-
-  NITSAN\NsThemeNewage\Service\ContentBlockMigration:
-    public: true
+  NITSAN\NsThemeNewage\:
+    resource: '../Classes/*'
