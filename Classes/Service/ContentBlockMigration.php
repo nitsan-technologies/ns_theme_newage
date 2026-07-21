@@ -343,6 +343,8 @@ class ContentBlockMigration
  
         $this->updateTtContent($data, $uid, $pid);
          if (!empty($parsed['contact'])) {
+            // Remove previously migrated children to keep the migration idempotent
+            $this->contentBlocksRepository->deleteOldRecord((int)$uid, (int)$langUid, 'contact');
             foreach (array_reverse($parsed['contact']) as $contact) {
                 $randomString = StringUtility::getUniqueId('NEW');
                 $data = [
@@ -381,6 +383,8 @@ class ContentBlockMigration
         ];
         $this->updateTtContent($data, $uid, $pid);
          if (!empty($parsed['contact'])) {
+            // Remove previously migrated children to keep the migration idempotent
+            $this->contentBlocksRepository->deleteOldRecord((int)$uid, (int)$langUid, 'contact_feature');
             foreach (array_reverse($parsed['contact']) as $contactFeature) {
                 $randomString = StringUtility::getUniqueId('NEW');
                 $data = [

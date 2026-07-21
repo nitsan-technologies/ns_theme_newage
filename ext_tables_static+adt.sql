@@ -33,29 +33,9 @@ INSERT INTO `pages` (`uid`, `pid`, `tstamp`, `crdate`, `deleted`, `hidden`, `sta
 --
 
 INSERT INTO `contact` (`uid`, `pid`, `tstamp`, `crdate`, `deleted`, `hidden`, `starttime`, `endtime`, `fe_group`, `sorting`, `editlock`, `sys_language_uid`, `l10n_parent`, `l10n_source`, `l10n_state`, `l10n_diffsource`, `foreign_table_parent_uid`, `socialIcon`, `socialLink`, `SocialBgColor`) VALUES 
-("1","1","1759470906","0","1","0","0","0","0","512","0","0","0","0",NULL,NULL,"1","fab fa-facebook-f","google.com","#ff0000"),
-("2","1","1759470880","1759470775","1","0","0","0","","1","0","0","0","0",NULL,"","7","","sdfg","#ff0000"),
 ("3","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
 ("4","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("5","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("6","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("7","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("8","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("9","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("10","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("11","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("12","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("13","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("14","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("15","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("16","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("17","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("18","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("19","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("20","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4"),
-("21","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-instagram","http://instagram.com","#ad1313"),
-("22","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-facebook-f","http://facebooc.com","#0d69e0"),
-("23","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4");
+("5","10","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"4","fab fa-twitter","http://twitter.com","#2293d4");
 
 --
 --
@@ -63,35 +43,10 @@ INSERT INTO `contact` (`uid`, `pid`, `tstamp`, `crdate`, `deleted`, `hidden`, `s
 --
 
 INSERT INTO `contact_feature` (`uid`, `pid`, `tstamp`, `crdate`, `deleted`, `hidden`, `starttime`, `endtime`, `fe_group`, `sorting`, `editlock`, `sys_language_uid`, `l10n_parent`, `l10n_source`, `l10n_state`, `l10n_diffsource`, `foreign_table_parent_uid`, `socialIcon`, `title`, `text`) VALUES 
-("1","1","1759400091","1759400091","0","0","0","0","","1","0","0","0","0",NULL,"","3","","custom cta sub title ","custom cta sub desc "),
 ("2","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
 ("3","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
 ("4","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("5","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("6","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("7","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("8","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("9","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("10","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("11","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("12","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("13","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("14","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("15","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("16","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("17","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("18","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("19","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("20","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("21","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("22","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("23","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("24","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("25","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!"),
-("26","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-lock-open","Open Source","Since this theme is Free Community licensed, you can use it commercially!"),
-("27","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-present","Compatible","Ready to use device mockups, no more Photoshop is required!"),
-("28","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-camera","Flexible Use","This template is built with latest standards & is compatible with TYPO3 v10!"),
-("29","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!");
+("5","12","0","0","0","0","0","0","0","0","0","0","0","0",NULL,NULL,"2","icon-screen-smartphone","Device Mockups","Put an image, video, animation, or anything else in the screen!");
 
 --
 --
