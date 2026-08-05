@@ -32,7 +32,8 @@ page {
     90 = EXT:ns_theme_newage/Resources/Public/vendor/simple-line-icons/css/simple-line-icons.css
     140 = EXT:ns_theme_newage/Resources/Public/css/new-age.css
     150 = EXT:ns_theme_newage/Resources/Public/css/custom.css
-    9901 = EXT:ns_basetheme/Resources/Public/css/ns_basetheme.css
+    # Apply Theme Options > Style > Theme Color (orange|blue|green)
+    160 = EXT:ns_theme_newage/Resources/Public/css/colors/{$ns_basetheme.website.settings.style_theme_color}.css
   }
 
   // Initiate all the js-together
@@ -41,30 +42,6 @@ page {
     20 = EXT:ns_theme_newage/Resources/Public/vendor/bootstrap/js/bootstrap.bundle.min.js
     30 = EXT:ns_theme_newage/Resources/Public/vendor/jquery-easing/jquery.easing.min.js
     40 = EXT:ns_theme_newage/Resources/Public/js/new-age.js
-    9901 = EXT:ns_basetheme/Resources/Public/js/ns_basetheme.js
-  }
-
-  footerData {
-    # Loaded at end of body so it wins over Visual Editor editable.css
-    9900 = TEXT
-    9900 {
-      value (
-<style>
-header.masthead .header-content h1,
-header.masthead .header-content h1.mb-5,
-header.masthead .header-content h1 ve-editable-text {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-</style>
-)
-    }
-
-    9901 = TEXT
-    9901 {
-      value = <a href="#" id="ns_basetheme_back_to_top" title="Back to top">&uarr;</a>
-      stdWrap.if.isTrue.data = siteSettings:ns_basetheme.website.settings.back_to_top
-    }
   }
 
   # <body> class based on backend_layout
@@ -111,73 +88,13 @@ header.masthead .header-content h1 ve-editable-text {
       pagets__content = TEXT
       pagets__content.value = {$ns_theme_newage.website.paths.templateRootPath}Content.html
     }
-    settings < plugin.ns_theme_newage.settings
-
-    dataProcessing {
-      # Required for f:render.text on page fields (e.g. page banner title)
-      5 = record-transformation
-
-      101 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-      101 {
-        levels = 5
-        special = directory
-        special.value = {$ns_basetheme.website.settings.main_menu}
-        expandAll = 1
-        includeSpacer = 1
-        as = MainMenu
-      }
-
-      102 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-      102 {
-        levels = 5
-        special = directory
-        special.value = {$ns_basetheme.website.settings.footer_menu}
-        expandAll = 1
-        includeSpacer = 1
-        as = FooterMenu
-      }
-    }
+    settings < plugin.ns_basetheme.settings
+    settings.childSettings < plugin.ns_theme_newage.settings
   }
 }
 
 # Get default content
 lib {
-
-  siteLogo = TEXT
-  siteLogo {
-    data = siteSettings:ns_basetheme.website.settings.logo
-    stdWrap.trim = 1
-  }
-
-  siteLogoWidth = TEXT
-  siteLogoWidth.data = siteSettings:ns_basetheme.website.settings.logo_width
-
-  siteLogoHeight = TEXT
-  siteLogoHeight.data = siteSettings:ns_basetheme.website.settings.logo_height
-
-  siteLogoText = TEXT
-  siteLogoText.data = siteSettings:ns_basetheme.website.settings.logo_text
-
-  pageBannerImage = TEXT
-  pageBannerImage.value = /fileadmin/ns_theme_newage/age-banner.png
-
-  socialTwitterLink = TEXT
-  socialTwitterLink {
-    data = siteSettings:ns_basetheme.website.settings.seo_twitter_link
-    stdWrap.trim = 1
-  }
-
-  socialFacebookLink = TEXT
-  socialFacebookLink {
-    data = siteSettings:ns_basetheme.website.settings.seo_facebook_link
-    stdWrap.trim = 1
-  }
-
-  socialLinkedinLink = TEXT
-  socialLinkedinLink {
-    data = siteSettings:ns_basetheme.website.settings.seo_linkedin_link
-    stdWrap.trim = 1
-  }
 
   copyright >
   copyright = COA
@@ -193,7 +110,7 @@ lib {
 
     2 = TEXT
     2 {
-      data = siteSettings:copyright
+      value = {$ns_basetheme.website.settings.copyright}
       wrap = |
     }
   }

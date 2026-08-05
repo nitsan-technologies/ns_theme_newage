@@ -3,19 +3,16 @@
 <div class="{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')} cta">
   <div class="container">
     <div id="c18" class="frame frame-default frame-type-text frame-layout-0">
-      <f:variable name="ctaHeadline" value="{data -> f:render.text(field: 'headline')}" />
-      <f:variable name="ctaSubHeadline" value="{data -> f:render.text(field: 'subHeadline')}" />
-      <f:if condition="{ctaHeadline} || {ctaSubHeadline}">
+      <f:if condition="{data.headline} || {data.subHeadline}">
         <h2 class="large-font">
-          {ctaHeadline}
+          {data.headline}
           <br>
-          {ctaSubHeadline}
+          {data.subHeadline}
         </h2>
       </f:if>
-      <f:variable name="ctaBtnText" value="{data -> f:render.text(field: 'btntxt')}" />
-      <f:if condition="{ctaBtnText} && {data.btnlink.url} !=''">
+      <f:if condition="{data.btntxt} && {data.btnlink.url} !=''">
         <f:link.typolink class="btn btn-outline btn-xl js-scroll-trigger" parameter="{data.btnlink}">
-          {ctaBtnText}
+          {data.btntxt}
         </f:link.typolink>
       </f:if>
     </div>

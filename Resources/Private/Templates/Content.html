@@ -2,12 +2,11 @@
 
 <f:section name="main">
 	<div class="site-main">
-		<section class="pageBanner" style="background-image: url('{f:cObject(typoscriptObjectPath: 'lib.pageBannerImage')}');">
+		<section class="pageBanner" style="background-image: url('fileadmin/ns_theme_newage/age-banner.png');">
 	        <div class="container">
 	            <div class="pattern-with-text pattern--small-right">
-	            	<f:variable name="pageTitle" value="{record -> f:render.text(field: 'title')}" />
-	            	<f:if condition="{pageTitle}">
-	                	<h2>{pageTitle}</h2>
+	            	<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}">
+	                	<h2>{f:cObject(typoscriptObjectPath: 'lib.pageTitle')}</h2>
 	                </f:if>	
 	            </div>
 	        </div>
