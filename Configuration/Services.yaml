@@ -6,6 +6,8 @@ services:
 
   NITSAN\NsThemeNewage\:
     resource: '../Classes/*'
+    exclude:
+      - '../Classes/Backend/ItemsProcFunc.php'
 
   NITSAN\NsThemeNewage\Updates\ContentBlockMigration:
     tags:
