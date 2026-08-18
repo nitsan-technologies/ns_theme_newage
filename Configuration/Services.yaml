@@ -6,3 +6,12 @@ services:
 
   NITSAN\NsThemeNewage\:
     resource: '../Classes/*'
+    exclude:
+      - '../Classes/Backend/ItemsProcFunc.php'
+
+  NITSAN\NsThemeNewage\Updates\ContentBlockMigration:
+    tags:
+      - name: 'install.upgrade.wizard'
+
+  NITSAN\NsThemeNewage\Service\ContentBlockMigration:
+    public: true
