@@ -1,0 +1,2 @@
+# Load existing TypoScript without duplicating includes
+@import 'EXT:ns_theme_newage/Configuration/TypoScript/setup.typoscript'

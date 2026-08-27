@@ -1,0 +1,4 @@
+name: nitsan/ns-theme-newage
+label: 'T3 New Age Theme'
+dependencies:
+  - nitsan-ns-basetheme/ns_basetheme
